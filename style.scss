@@ -35,10 +35,8 @@ body {
       flex-direction: column;
       gap: 20px;
       .smk-content-top {
-        width: 1200px;
-        height: 793px;
+        @include size-1200-793;
         border: 1px solid #f00;
-        border-radius: 5px;
         position: relative;
         h2 {
           color: map-get($map: $color, $key: light);
@@ -53,6 +51,68 @@ body {
         .smk-bottom-item {
           @include size-183-183;
           border: 1px solid #f00;
+        }
+      }
+    }
+    .smk-content-02 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: 20px;
+      .smk-content-left {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .smk-left-item {
+          &:nth-child(1) {
+            @include size-387-183;
+            border: 1px solid #f00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+              color: map-get($map: $color, $key: light);
+            }
+          }
+          &:nth-child(2) {
+            @include size-387-387;
+            border: 1px solid #f00;
+          }
+          &:nth-child(3) {
+            @include size-387-590;
+            border: 1px solid #f00;
+          }
+        }
+      }
+      .smk-content-right {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .smk-right-item {
+          &:nth-child(1) {
+            display: flex;
+            gap: 20px;
+            .smk-right-item-01 {
+              @include size-387-387;
+              border: 1px solid #f00;
+            }
+            .smk-right-item-02 {
+              @include size-387-387;
+              border: 1px solid #f00;
+            }
+          }
+          &:nth-child(2) {
+            @include size-793-387;
+            border: 1px solid #f00;
+          }
+          &:nth-child(3) {
+            @include size-793-387;
+            border: 1px solid #f00;
+          }
         }
       }
     }
