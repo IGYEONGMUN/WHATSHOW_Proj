@@ -1,0 +1,97 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  background-color: #000;
+  color: #00fffb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.lsi-container {
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lsi-container .lsi-logo {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  justify-content: left;
+  cursor: pointer;
+}
+.lsi-container .lsi-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5vh;
+}
+.lsi-container .lsi-content .lsi-poster img {
+  width: 450px;
+  height: 453px;
+  max-width: 500px;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+.lsi-container .lsi-login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.lsi-container .lsi-login-section h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+.lsi-container .lsi-login-section .lsi-login-btn {
+  width: 426px;
+  height: 48px;
+  border: 2px solid #c1c7cd;
+  background: transparent;
+  color: #c1c7cd;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+.lsi-container .lsi-login-section .lsi-login-btn span {
+  margin-right: 10px;
+}
+.lsi-container .lsi-login-section .lsi-login-btn span img {
+  background: #000;
+}
+.lsi-container .lsi-login-section .lsi-login-btn:hover {
+  color: #fff;
+}
+.lsi-container .lsi-login-section .lsi-forgot-id {
+  margin: 0;
+  font-size: 16px;
+  color: #00fffb;
+}
+.lsi-container .lsi-login-section .lsi-forgot-id a {
+  color: #00fffb;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.lsi-container .lsi-login-section .lsi-forgot-id a:hover {
+  color: #ffffff;
+}
