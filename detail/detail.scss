@@ -25,13 +25,11 @@ main {
         @include size-590-381;
       }
       .cdy-container {
-        border: 1px solid #f00;
         display: flex;
         width: 584px;
         height: 381px;
         gap: 40px;
         .cdy-info {
-          border: 1px solid dodgerblue;
           width: 361px;
           height: 100%;
           gap: 20px;
@@ -71,7 +69,6 @@ main {
         .cdy-actors {
           display: flex;
           flex-direction: column;
-          border: 1px solid dodgerblue;
           gap: 5px;
           .actors {
             display: flex;
@@ -101,13 +98,12 @@ main {
     .cdy-contents02 {
       width: 100%;
       margin-top: 50px;
+      overflow: hidden;
       .cdy-epi {
-        border: 1px solid #f00;
         display: flex;
         margin-top: 15px;
         gap: 20px;
         .epi {
-          border: 1px solid #f00;
           .epi-img {
             border: 1px solid #f00;
             margin-bottom: 10px;
@@ -119,11 +115,21 @@ main {
     .cdy-contents03 {
       width: 100%;
       margin-top: 20px;
-      border: 1px solid #f00;
       display: flex;
       gap: 20px;
       .cdy-location {
-        border: 1px solid dodgerblue;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .contitle {
+          display: flex;
+          gap: 10px;
+          .fa-arrow-up {
+            line-height: 24px;
+            color: map-get($map: $color, $key: main);
+            transform: rotate(45deg);
+          }
+        }
         .location-sub1 {
           flex-direction: column;
           text-align: center;
@@ -134,9 +140,17 @@ main {
         }
       }
       .cdy-ost {
-        border: 1px solid dodgerblue;
         display: flex;
         flex-direction: column;
+        .contitle {
+          display: flex;
+          gap: 10px;
+          .fa-arrow-up {
+            line-height: 24px;
+            color: map-get($map: $color, $key: main);
+            transform: rotate(45deg);
+          }
+        }
         .cdy-ostcon1 {
           display: flex;
           gap: 20px;
@@ -158,9 +172,18 @@ main {
         }
       }
       .cdy-goods {
-        border: 1px solid dodgerblue;
         display: flex;
         flex-direction: column;
+        gap: 15px;
+        .contitle {
+          display: flex;
+          gap: 10px;
+          .fa-arrow-up {
+            line-height: 24px;
+            color: map-get($map: $color, $key: main);
+            transform: rotate(45deg);
+          }
+        }
         .goods-con1 {
           display: flex;
           text-align: center;
@@ -175,7 +198,6 @@ main {
     .cdy-contents04 {
       width: 100%;
       gap: 15px;
-      border: 1px solid #f00;
       margin-bottom: 15px;
       margin-top: 20px;
       .cdy-cons {

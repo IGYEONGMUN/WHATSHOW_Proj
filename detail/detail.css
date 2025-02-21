@@ -42,14 +42,12 @@ main section .cdy-contents .img {
   border-radius: 5px;
 }
 main section .cdy-contents .cdy-container {
-  border: 1px solid #f00;
   display: flex;
   width: 584px;
   height: 381px;
   gap: 40px;
 }
 main section .cdy-contents .cdy-container .cdy-info {
-  border: 1px solid dodgerblue;
   width: 361px;
   height: 100%;
   gap: 20px;
@@ -89,7 +87,6 @@ main section .cdy-contents .cdy-container .cdy-info ul li p {
 main section .cdy-contents .cdy-container .cdy-actors {
   display: flex;
   flex-direction: column;
-  border: 1px solid dodgerblue;
   gap: 5px;
 }
 main section .cdy-contents .cdy-container .cdy-actors .actors {
@@ -119,15 +116,12 @@ main section .cdy-contents .cdy-container .cdy-actors .actor {
 main section .cdy-contents02 {
   width: 100%;
   margin-top: 50px;
+  overflow: hidden;
 }
 main section .cdy-contents02 .cdy-epi {
-  border: 1px solid #f00;
   display: flex;
   margin-top: 15px;
   gap: 20px;
-}
-main section .cdy-contents02 .cdy-epi .epi {
-  border: 1px solid #f00;
 }
 main section .cdy-contents02 .cdy-epi .epi .epi-img {
   border: 1px solid #f00;
@@ -139,12 +133,22 @@ main section .cdy-contents02 .cdy-epi .epi .epi-img {
 main section .cdy-contents03 {
   width: 100%;
   margin-top: 20px;
-  border: 1px solid #f00;
   display: flex;
   gap: 20px;
 }
 main section .cdy-contents03 .cdy-location {
-  border: 1px solid dodgerblue;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main section .cdy-contents03 .cdy-location .contitle {
+  display: flex;
+  gap: 10px;
+}
+main section .cdy-contents03 .cdy-location .contitle .fa-arrow-up {
+  line-height: 24px;
+  color: #00fffb;
+  transform: rotate(45deg);
 }
 main section .cdy-contents03 .cdy-location .location-sub1 {
   flex-direction: column;
@@ -157,9 +161,17 @@ main section .cdy-contents03 .cdy-location .location-sub1 .lo-img {
   border: 1px solid #f00;
 }
 main section .cdy-contents03 .cdy-ost {
-  border: 1px solid dodgerblue;
   display: flex;
   flex-direction: column;
+}
+main section .cdy-contents03 .cdy-ost .contitle {
+  display: flex;
+  gap: 10px;
+}
+main section .cdy-contents03 .cdy-ost .contitle .fa-arrow-up {
+  line-height: 24px;
+  color: #00fffb;
+  transform: rotate(45deg);
 }
 main section .cdy-contents03 .cdy-ost .cdy-ostcon1 {
   display: flex;
@@ -185,9 +197,18 @@ main section .cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-img {
   border: 1px solid #f00;
 }
 main section .cdy-contents03 .cdy-goods {
-  border: 1px solid dodgerblue;
   display: flex;
   flex-direction: column;
+  gap: 15px;
+}
+main section .cdy-contents03 .cdy-goods .contitle {
+  display: flex;
+  gap: 10px;
+}
+main section .cdy-contents03 .cdy-goods .contitle .fa-arrow-up {
+  line-height: 24px;
+  color: #00fffb;
+  transform: rotate(45deg);
 }
 main section .cdy-contents03 .cdy-goods .goods-con1 {
   display: flex;
@@ -203,7 +224,6 @@ main section .cdy-contents03 .cdy-goods .goods-con1 .goods-img {
 main section .cdy-contents04 {
   width: 100%;
   gap: 15px;
-  border: 1px solid #f00;
   margin-bottom: 15px;
   margin-top: 20px;
 }
