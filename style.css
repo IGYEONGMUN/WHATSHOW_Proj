@@ -17,6 +17,7 @@ a {
 
 /* variables */
 /* mixin */
+/*==== lsi ====*/
 html {
   font-size: 62.5%;
 }
@@ -33,6 +34,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 100px 0;
 }
 #container .smk-content-inner {
   width: 1200px;
@@ -50,8 +52,8 @@ body {
 #container .smk-content-inner .smk-content-01 .smk-content-top {
   width: 1200px;
   height: 793px;
-  border: 1px solid #f00;
   border-radius: 5px;
+  border: 1px solid #f00;
   position: relative;
 }
 #container .smk-content-inner .smk-content-01 .smk-content-top h2 {
@@ -64,9 +66,13 @@ body {
   display: flex;
   gap: 20px;
 }
-#container .smk-content-inner .smk-content-01 .smk-content-bottom .smk-bottom-item {
+#container
+  .smk-content-inner
+  .smk-content-01
+  .smk-content-bottom
+  .smk-bottom-item {
   width: 183px;
   height: 183px;
   border-radius: 5px;
   border: 1px solid #f00;
-}/*# sourceMappingURL=style.css.map */
+}

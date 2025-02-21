@@ -1,0 +1,85 @@
+@import "../../styles/variables.scss";
+@import "../../styles/reset.scss";
+@import "../../styles/mixin.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: map-get($map: $color, $key: dark);
+  color: map-get($map: $color, $key: main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.lsi-container {
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .lsi-logo {
+    @include logo();
+  }
+
+  .lsi-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5vh;
+    .lsi-poster img {
+      width: 450px;
+      height: 453px;
+      max-width: 500px;
+      border-radius: 10px;
+      margin-right: 50px;
+      object-fit: contain;
+    }
+  }
+
+  .lsi-login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    h2 {
+      font-size: 3rem;
+    }
+    .lsi-login-btn {
+      @include loginBtn();
+      span {
+        margin-right: 10px;
+        img {
+          transition: all 0.3s;
+        }
+      }
+      &:hover {
+        color: map-get($map: $color, $key: light);
+      }
+    }
+    .lsi-forgot-id {
+      font-size: 16px;
+      color: map-get($map: $color, $key: main);
+      a {
+        color: map-get($map: $color, $key: main);
+        text-decoration: underline;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: map-get($map: $color, $key: light);
+        }
+      }
+    }
+  }
+}

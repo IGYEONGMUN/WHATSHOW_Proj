@@ -1,3 +1,215 @@
 @import "../styles/mixin.scss";
 @import "../styles/reset.scss";
 @import "../styles/variables.scss";
+
+main {
+  width: 100%;
+  background: map-get($map: $color, $key: dark);
+  color: map-get($map: $color, $key: light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  section {
+    width: 1200px;
+    height: 100%;
+    border: 1px solid #f00;
+    .cdy-contents {
+      margin-top: 150px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1200px;
+      gap: 20px;
+      .img {
+        border: 1px solid #f00;
+        @include size-590-381;
+      }
+      .cdy-container {
+        display: flex;
+        width: 584px;
+        height: 381px;
+        gap: 40px;
+        .cdy-info {
+          width: 361px;
+          height: 100%;
+          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          .tag {
+            display: flex;
+            gap: 5px;
+            .tag01 {
+              border: 1px solid map-get($map: $color, $key: light);
+              background: map-get($map: $color, $key: light);
+              color: map-get($map: $color, $key: dark);
+              border-radius: 5px;
+              padding: 5px;
+            }
+            .tag02 {
+              border: 1px solid map-get($map: $color, $key: light);
+              border-radius: 5px;
+              padding: 5px;
+            }
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            li {
+              gap: 5px;
+              h3 {
+                font-size: 24px;
+              }
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .cdy-actors {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .actors {
+            display: flex;
+            gap: 10px;
+          }
+          .actors-left {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+          }
+          .actors-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+          }
+          .actor {
+            border: 1px solid #f00;
+            @include size-85-85;
+          }
+        }
+      }
+    }
+    .cdy-contents02 {
+      width: 100%;
+      margin-top: 50px;
+      overflow: hidden;
+      .cdy-epi {
+        display: flex;
+        margin-top: 15px;
+        gap: 20px;
+        .epi {
+          .epi-img {
+            border: 1px solid #f00;
+            margin-bottom: 10px;
+            @include size-305-180;
+          }
+        }
+      }
+    }
+    .cdy-contents03 {
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      .cdy-location {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .contitle {
+          display: flex;
+          gap: 10px;
+          .fa-arrow-up {
+            line-height: 24px;
+            color: map-get($map: $color, $key: main);
+            transform: rotate(45deg);
+          }
+        }
+        .location-sub1 {
+          flex-direction: column;
+          text-align: center;
+          .lo-img {
+            @include size-387-183;
+            border: 1px solid #f00;
+          }
+        }
+      }
+      .cdy-ost {
+        display: flex;
+        flex-direction: column;
+        .contitle {
+          display: flex;
+          gap: 10px;
+          .fa-arrow-up {
+            line-height: 24px;
+            color: map-get($map: $color, $key: main);
+            transform: rotate(45deg);
+          }
+        }
+        .cdy-ostcon1 {
+          display: flex;
+          gap: 20px;
+          text-align: center;
+          margin: 15px 0;
+          .ost-img {
+            @include size-183-183;
+            border: 1px solid #f00;
+          }
+        }
+        .cdy-ostcon2 {
+          display: flex;
+          gap: 20px;
+          text-align: center;
+          .ost-img {
+            @include size-183-183;
+            border: 1px solid #f00;
+          }
+        }
+      }
+      .cdy-goods {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .contitle {
+          display: flex;
+          gap: 10px;
+          .fa-arrow-up {
+            line-height: 24px;
+            color: map-get($map: $color, $key: main);
+            transform: rotate(45deg);
+          }
+        }
+        .goods-con1 {
+          display: flex;
+          text-align: center;
+          gap: 20px;
+          .goods-img {
+            @include size-183-183;
+            border: 1px solid #f00;
+          }
+        }
+      }
+    }
+    .cdy-contents04 {
+      width: 100%;
+      gap: 15px;
+      margin-bottom: 15px;
+      margin-top: 20px;
+      .cdy-cons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        .sub {
+          border: 1px solid dodgerblue;
+          @include size-183-250;
+        }
+      }
+    }
+  }
+}

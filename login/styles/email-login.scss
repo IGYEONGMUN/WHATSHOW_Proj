@@ -1,0 +1,74 @@
+@import "../../styles/variables.scss";
+@import "../../styles/reset.scss";
+@import "../../styles/mixin.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: map-get($map: $color, $key: dark);
+  // color: map-get($map: $color, $key: main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.lsi-email-login-container {
+  width: 600px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.lsi-email-login-header {
+  color: map-get($map: $color, $key: btn-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+  h1 {
+    font-size: 3rem;
+    color: map-get($map: $color, $key: main);
+  }
+  .lsi-password-reset-link {
+    font-size: 1rem;
+    transition: all 0.3s;
+    &:hover {
+      color: map-get($map: $color, $key: light);
+    }
+  }
+}
+
+.lsi-email-login-content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+input {
+  @include inputText();
+  &:focus {
+    border: 1px solid map-get($map: $color, $key: main);
+    outline: none;
+  }
+}
+
+.lsi-email-login-btn {
+  width: 100%;
+  height: 48px;
+  border: 2px solid map-get($map: $color, $key: btn-bg);
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.4rem;
+  color: map-get($map: $color, $key: btn-bg);
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    color: map-get($map: $color, $key: light);
+    font-weight: bold;
+  }
+}
