@@ -1,12 +1,15 @@
+@import "../../styles/variables.scss";
+@import "../../styles/reset.scss";
+@import "../../styles/mixin.scss";
+
 html {
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6rem;
-  margin: 0;
-  background-color: #000;
-  color: #00fffb;
+  background-color: map-get($map: $color, $key: dark);
+  color: map-get($map: $color, $key: main);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,11 +28,7 @@ body {
   justify-content: center;
   align-items: center;
   .lsi-logo {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    justify-content: left;
-    cursor: pointer;
+    @include logo();
   }
 
   .lsi-content {
@@ -44,6 +43,7 @@ body {
       max-width: 500px;
       border-radius: 10px;
       margin-right: 50px;
+      object-fit: contain;
     }
   }
 
@@ -54,46 +54,30 @@ body {
     gap: 40px;
     h2 {
       font-size: 3rem;
-      margin: 0;
     }
     .lsi-login-btn {
-      width: 426px;
-      height: 48px;
-      border: 2px solid #c1c7cd;
-      background: transparent;
-      color: #c1c7cd;
-      font-size: 1.4rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      border-radius: 5px;
-      padding: 20px;
-      transition: all 0.3s;
+      @include loginBtn();
       span {
         margin-right: 10px;
         img {
-          background: #000;
+          transition: all 0.3s;
         }
       }
-
       &:hover {
-        color: #fff;
+        color: map-get($map: $color, $key: light);
       }
     }
     .lsi-forgot-id {
-      margin: 0;
       font-size: 16px;
-      color: #00fffb;
+      color: map-get($map: $color, $key: main);
       a {
-        color: #00fffb;
+        color: map-get($map: $color, $key: main);
         text-decoration: underline;
         cursor: pointer;
         transition: all 0.3s;
 
         &:hover {
-          color: #ffffff;
+          color: map-get($map: $color, $key: light);
         }
       }
     }

@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @mixin size-1200-793 {
   width: 1200px;
   height: 793px;
@@ -10,9 +12,9 @@
   border-radius: 5px;
 }
 
-@mixin size-793-396 {
+@mixin size-793-387 {
   width: 793px;
-  height: 396px;
+  height: 387px;
   border-radius: 5px;
 }
 
@@ -140,4 +142,55 @@
   width: 77px;
   height: 77px;
   border-radius: 5px;
+}
+
+/*==== lsi ====*/
+@mixin loginBtn {
+  width: 426px;
+  height: 48px;
+  border: 2px solid map-get($map: $color, $key: btn-bg);
+  background: transparent;
+  color: map-get($map: $color, $key: btn-bg);
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+@mixin logo {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  justify-content: left;
+  cursor: pointer;
+}
+
+@mixin findBtn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  border: 1px solid map-get($map: $color, $key: btn-bg);
+  border-radius: 5px;
+  background: none;
+  color: map-get($map: $color, $key: btn-bg);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+@mixin inputText {
+  width: 100%;
+  height: 48px;
+  padding: 1rem;
+  background: transparent;
+  color: map-get($map: $color, $key: light);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  border: 1px solid map-get($map: $color, $key: btn-bg);
+  border-radius: 5px;
+  outline: none;
 }
