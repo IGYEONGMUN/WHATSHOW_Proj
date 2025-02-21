@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/email-login.css" />
+    <script src="./js/email-login.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="lsi-email-login-container">
+      <header class="lsi-email-login-header">
+        <h1>로그인</h1>
+        <div class="lsi-a-group">
+          <a href="./reset-password.html" class="lsi-password-reset-link"
+            >비밀번호 재설정</a
+          >
+          |
+          <a href="./signup.html" class="lsi-password-reset-link">회원가입</a>
+        </div>
+      </header>
+      <form class="lsi-email-login-form">
+        <input
+          type="email"
+          placeholder="이메일을 입력하세요."
+          required
+          class="lsi-email-input"
+        />
+        <input
+          type="password"
+          placeholder="비밀번호를 입력하세요."
+          required
+          class="lsi-password-input"
+        />
+        <button type="submit" class="lsi-email-login-btn">로그인</button>
+      </form>
+    </main>
+  </body>
+</html>

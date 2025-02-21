@@ -1,0 +1,83 @@
+@import "../../styles/variables.scss";
+@import "../../styles/reset.scss";
+@import "../../styles/mixin.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: map-get($map: $color, $key: dark);
+  // color: map-get($map: $color, $key: main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.lsi-find-id-container {
+  width: 600px;
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 4rem;
+    color: map-get($map: $color, $key: main);
+    margin-bottom: 4rem;
+  }
+
+  .lsi-find-section {
+    margin-bottom: 4rem;
+    text-align: left;
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      color: map-get($map: $color, $key: btn-bg);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: map-get($map: $color, $key: btn-bg);
+    }
+
+    input[type="text"] {
+      @include inputText();
+      &:focus {
+        border: 1px solid map-get($map: $color, $key: main);
+        outline: none;
+      }
+    }
+
+    .lsi-find-btn {
+      @include findBtn();
+      &:hover {
+        color: map-get($map: $color, $key: light);
+        border-color: map-get($map: $color, $key: light);
+      }
+    }
+  }
+
+  .lsi-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: map-get($map: $color, $key: main);
+    margin: 10rem 0;
+    gap: 15px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: map-get($map: $color, $key: main);
+      margin: 0 5px;
+    }
+  }
+}
