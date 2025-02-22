@@ -13,162 +13,354 @@ html {
 
 body {
   font-size: 1.6rem;
-}
-
-#container {
-  width: 100%;
-  height: 100%;
-  background: map-get($map: $color, $key: dark);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 100px 0;
-  .smk-content-inner {
-    width: 1200px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1920px) {
+  #web-container {
+    width: 100%;
     height: 100%;
+    background: map-get($map: $color, $key: dark);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
-    .smk-content-01 {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      .smk-content-top {
-        @include size-1200-793;
-        border: 1px solid #f00;
-        position: relative;
-        h2 {
-          color: map-get($map: $color, $key: light);
-          position: absolute;
-          top: 15px;
-          left: 15px;
-        }
-      }
-      .smk-content-bottom {
-        display: flex;
-        gap: 20px;
-        .smk-bottom-item {
-          @include size-183-183;
-          border: 1px solid #f00;
-        }
-      }
-    }
-    .smk-content-02 {
-      width: 100%;
+    align-items: center;
+    padding: 100px 0;
+    .smk-content-inner {
+      width: 1200px;
       height: 100%;
       display: flex;
-      gap: 20px;
-      .smk-content-left {
+      flex-direction: column;
+      justify-content: center;
+      gap: 100px;
+      .smk-content-01 {
         width: 100%;
-        height: 100%;
+        min-width: 1200px;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .smk-left-item {
-          &:nth-child(1) {
-            @include size-387-183;
+        .smk-content-top {
+          @include size-1200-793;
+          border: 1px solid #f00;
+          position: relative;
+          h2 {
+            color: map-get($map: $color, $key: light);
+            position: absolute;
+            top: 15px;
+            left: 15px;
+          }
+        }
+        .smk-content-bottom {
+          display: flex;
+          gap: 20px;
+          .smk-bottom-item {
+            @include size-183-183;
             border: 1px solid #f00;
+          }
+        }
+      }
+      .smk-content-02 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 20px;
+        .smk-content-left {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .smk-left-item {
+            &:nth-child(1) {
+              @include size-387-183;
+              border: 1px solid #f00;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              h2 {
+                color: map-get($map: $color, $key: light);
+              }
+            }
+            &:nth-child(2) {
+              @include size-387-387;
+              border: 1px solid #f00;
+            }
+            &:nth-child(3) {
+              @include size-387-590;
+              border: 1px solid #f00;
+            }
+          }
+        }
+        .smk-content-right {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .smk-right-item {
+            &:nth-child(1) {
+              display: flex;
+              gap: 20px;
+              .smk-right-item-01 {
+                @include size-387-387;
+                border: 1px solid #f00;
+              }
+              .smk-right-item-02 {
+                @include size-387-387;
+                border: 1px solid #f00;
+              }
+            }
+            &:nth-child(2) {
+              @include size-793-387;
+              border: 1px solid #f00;
+            }
+            &:nth-child(3) {
+              @include size-793-387;
+              border: 1px solid #f00;
+            }
+          }
+        }
+      }
+      .smk-content-03 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .smk-content-top {
+          display: flex;
+          gap: 20px;
+          .smk-top-item-01 {
+            @include size-387-183;
             display: flex;
             justify-content: center;
             align-items: center;
+            border: 1px solid #f00;
             h2 {
               color: map-get($map: $color, $key: light);
             }
           }
-          &:nth-child(2) {
-            @include size-387-387;
+          .smk-top-item-02 {
+            @include size-183-183;
             border: 1px solid #f00;
           }
-          &:nth-child(3) {
-            @include size-387-590;
+        }
+        .smk-content-middle {
+          display: flex;
+          gap: 20px;
+          .smk-middle-item {
+            @include size-387-183;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-bottom {
+          display: flex;
+          gap: 20px;
+          .smk-bottom-item {
+            @include size-387-183;
             border: 1px solid #f00;
           }
         }
       }
-      .smk-content-right {
-        width: 100%;
-        height: 100%;
+      .smk-content-04 {
         display: flex;
-        flex-direction: column;
         gap: 20px;
-        .smk-right-item {
-          &:nth-child(1) {
-            display: flex;
-            gap: 20px;
-            .smk-right-item-01 {
-              @include size-387-387;
-              border: 1px solid #f00;
-            }
-            .smk-right-item-02 {
-              @include size-387-387;
-              border: 1px solid #f00;
-            }
+        .smk-content-left {
+          position: relative;
+          h2 {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: map-get($map: $color, $key: light);
           }
-          &:nth-child(2) {
-            @include size-793-387;
+          .smk-left-item {
+            @include size-793-792;
             border: 1px solid #f00;
           }
-          &:nth-child(3) {
-            @include size-793-387;
+        }
+        .smk-content-right {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .smk-right-item {
+            @include size-387-183;
             border: 1px solid #f00;
           }
         }
       }
     }
-    .smk-content-03 {
+    #tablet-container {
+      display: none;
+    }
+  }
+  #tablet-container {
+    display: none;
+  }
+  #mobile-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+  #web-container {
+    display: none;
+  }
+  #tablet-container {
+    width: 100%;
+    height: 100%;
+    background: map-get($map: $color, $key: dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    .smk-content-inner {
+      width: 940px;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      .smk-content-top {
+      justify-content: center;
+      gap: 100px;
+      .smk-content-01 {
         display: flex;
         gap: 20px;
-        .smk-top-item-01 {
-          @include size-387-183;
+        .smk-content-left {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .content-left-top {
+            @include size-556-364;
+            border: 1px solid #f00;
+          }
+          .content-left-bottom {
+            display: flex;
+            gap: 20px;
+            .left-bottom-item {
+              @include size-172-172;
+              border: 1px solid #f00;
+            }
+          }
+        }
+        .smk-content-right {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .content-right-top {
+            @include size-364-364;
+            border: 1px solid #f00;
+          }
+          .content-right-bottom {
+            display: flex;
+            gap: 20px;
+            .right-bottom-item {
+              @include size-172-172;
+              border: 1px solid #f00;
+            }
+          }
+        }
+      }
+      .smk-content-02 {
+        display: flex;
+        gap: 20px;
+        .smk-content-left {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .content-left-top {
+            display: flex;
+            gap: 20px;
+            .left-top-item {
+              @include size-172-172;
+              border: 1px solid #f00;
+            }
+          }
+          .content-left-bottom {
+            @include size-364-172;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-middle {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .content-middle-top {
+            display: flex;
+            gap: 20px;
+            .middle-top-item {
+              @include size-172-172;
+              border: 1px solid #f00;
+            }
+          }
+          .content-middle-bottom {
+            @include size-364-172;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-right {
+          @include size-172-364;
+          border: 1px solid #f00;
+        }
+      }
+      .smk-content-03 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .smk-content-top {
+          display: flex;
+          gap: 20px;
+          .smk-top-item-01 {
+            @include size-172-172;
+            border: 1px solid #f00;
+          }
+          .smk-top-item-02 {
+            @include size-364-172;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-middle {
+          display: flex;
+          gap: 20px;
+          .smk-middle-item-01 {
+            @include size-172-172;
+            border: 1px solid #f00;
+          }
+          .smk-middle-item-02 {
+            @include size-364-172;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-bottom {
+          display: flex;
+          gap: 20px;
+          .smk-bottom-item-01 {
+            @include size-172-172;
+            border: 1px solid #f00;
+          }
+          .smk-bottom-item-02 {
+            @include size-364-172;
+            border: 1px solid #f00;
+          }
+        }
+      }
+      .smk-content-04 {
+        display: flex;
+        gap: 20px;
+      }
+      .smk-content-left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .content-left-item-01 {
+          @include size-556-172;
+          border: 1px solid #f00;
           display: flex;
           justify-content: center;
           align-items: center;
-          border: 1px solid #f00;
           h2 {
             color: map-get($map: $color, $key: light);
           }
         }
-        .smk-top-item-02 {
-          @include size-183-183;
-          border: 1px solid #f00;
-        }
-      }
-      .smk-content-middle {
-        display: flex;
-        gap: 20px;
-        .smk-middle-item {
-          @include size-387-183;
-          border: 1px solid #f00;
-        }
-      }
-      .smk-content-bottom {
-        display: flex;
-        gap: 20px;
-        .smk-bottom-item {
-          @include size-387-183;
-          border: 1px solid #f00;
-        }
-      }
-    }
-    .smk-content-04 {
-      display: flex;
-      gap: 20px;
-      .smk-content-left {
-        position: relative;
-        h2 {
-          position: absolute;
-          top: 15px;
-          left: 15px;
-          color: map-get($map: $color, $key: light);
-        }
-        .smk-left-item {
-          @include size-793-792;
+        .content-left-item-02 {
+          @include size-556-556;
           border: 1px solid #f00;
         }
       }
@@ -176,11 +368,173 @@ body {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .smk-right-item {
-          @include size-387-183;
+        .content-right-item {
+          @include size-364-172;
           border: 1px solid #f00;
         }
       }
     }
   }
+  #mobile-container {
+    display: none;
+  }
 }
+
+@media screen and (max-width: 959px) {
+  #web-container {
+    display: none;
+  }
+  #tablet-container {
+    display: none;
+  }
+  #mobile-container {
+    width: 100%;
+    height: 100%;
+    background: map-get($map: $color, $key: dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    .smk-content-inner {
+      width: 326px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      .smk-content-01 {
+        display: flex;
+        gap: 5px;
+        .smk-content-left {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .content-left-top {
+            @include size-243-160;
+            border: 1px solid #f00;
+          }
+          .content-left-bottom {
+            display: flex;
+            gap: 5px;
+            .left-bottom-item {
+              @include size-77-77;
+              border: 1px solid #f00;
+            }
+          }
+        }
+        .smk-content-right {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .content-right-item {
+            @include size-77-77;
+            border: 1px solid #f00;
+          }
+        }
+      }
+      .smk-content-02 {
+        display: flex;
+        gap: 5px;
+        .smk-content-left {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .content-left-item {
+            @include size-160-77;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-middle {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .content-middle-item {
+            @include size-77-77;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-right {
+          .content-right-item {
+            @include size-77-241;
+            border: 1px solid #f00;
+          }
+        }
+      }
+      .smk-content-03 {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .smk-content-top {
+          display: flex;
+          gap: 5px;
+          .content-top-item {
+            @include size-77-77;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-middle-01 {
+          display: flex;
+          gap: 5px;
+          .content-middle-item-01 {
+            @include size-77-77;
+            border: 1px solid #f00;
+          }
+          .content-middle-item-02 {
+            @include size-160-77;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-middle-02 {
+          display: flex;
+          gap: 5px;
+          .content-middle-item-02 {
+            @include size-160-77;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-bottom {
+          display: flex;
+          gap: 5px;
+          .content--bottom-item {
+            @include size-160-77;
+            border: 1px solid #f00;
+          }
+        }
+      }
+      .smk-content-04 {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .smk-content-top {
+          display: flex;
+          gap: 5px;
+          .content-top-item {
+            @include size-326-326;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-middle {
+          display: flex;
+          gap: 5px;
+          .content-middle-item {
+            @include size-160-77;
+            border: 1px solid #f00;
+          }
+        }
+        .smk-content-bottom {
+          display: flex;
+          gap: 5px;
+          .content-bottom-item {
+            @include size-160-77;
+            border: 1px solid #f00;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @keyframes vertical-slide {
+//   0%
+// }
