@@ -24,9 +24,21 @@
   border-radius: 5px;
 }
 
+@mixin size-556-556 {
+  width: 556px;
+  height: 556px;
+  border-radius: 5px;
+}
+
 @mixin size-556-364 {
   width: 556px;
   height: 364px;
+  border-radius: 5px;
+}
+
+@mixin size-556-172 {
+  width: 556px;
+  height: 172px;
   border-radius: 5px;
 }
 
@@ -54,9 +66,21 @@
   border-radius: 5px;
 }
 
+@mixin size-364-172 {
+  width: 364px;
+  height: 172px;
+  border-radius: 5px;
+}
+
 @mixin size-362-147 {
   width: 362px;
   height: 147px;
+  border-radius: 5px;
+}
+
+@mixin size-326-326 {
+  width: 326px;
+  height: 326px;
   border-radius: 5px;
 }
 
@@ -93,6 +117,12 @@
 @mixin size-183-183 {
   width: 183px;
   height: 183px;
+  border-radius: 5px;
+}
+
+@mixin size-172-364 {
+  width: 172px;
+  height: 364px;
   border-radius: 5px;
 }
 
@@ -136,6 +166,12 @@
   width: 85px;
   height: 85px;
   border-radius: 50%;
+}
+
+@mixin size-77-241 {
+  width: 77px;
+  height: 241px;
+  border-radius: 5px;
 }
 
 @mixin size-77-77 {
