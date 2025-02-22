@@ -5,9 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/signup.css" />
     <script src="./js/signup.js"></script>
-    <title>Document</title>
+    <title>WHATSHOW|회원가입</title>
   </head>
   <body>
-    <h1>회원가입</h1>
+    <div class="lsi-signup-container">
+      <h1>회원가입</h1>
+      <form class="lsi-signup-form">
+        <input type="text" placeholder="이름을 입력하세요." required />
+        <input type="email" placeholder="이메일을 입력하세요." required />
+        <p class="lsi-email-info">
+          ※ 결제 등 중요 정보 알림, 로그인, 비밀번호 찾기에 사용돼요.
+        </p>
+        <input type="password" placeholder="비밀번호를 입력하세요." required />
+
+        <div class="lsi-terms-container">
+          <label><input type="checkbox" /> 전체 약관에 동의 합니다.</label>
+          <label><input type="checkbox" /> 만 14세 이상입니다.</label>
+          <label
+            ><input type="checkbox" /> (필수)
+            <a href="#">왓쇼 서비스 이용 약관 보기</a></label
+          >
+          <label
+            ><input type="checkbox" /> (필수)
+            <a href="#">왓쇼포인트 서비스 이용 약관 보기</a></label
+          >
+          <label
+            ><input type="checkbox" /> (필수)
+            <a href="#">개인정보 수집 및 이용 동의 보기</a></label
+          >
+          <label
+            ><input type="checkbox" /> (선택)
+            <a href="#">신작 알림 이벤트 정보 수신 보기</a></label
+          >
+        </div>
+
+        <button type="submit" class="lsi-signup-btn">가입하기</button>
+      </form>
+    </div>
   </body>
 </html>

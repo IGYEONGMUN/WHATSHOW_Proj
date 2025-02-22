@@ -146,27 +146,46 @@
 
 /*==== lsi ====*/
 @mixin loginBtn {
-  width: 426px;
+  width: 100%;
+  max-width: 550px;
   height: 48px;
   border: 2px solid map-get($map: $color, $key: btn-bg);
   background: transparent;
   color: map-get($map: $color, $key: btn-bg);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; // 기본값은 space-between 유지
   cursor: pointer;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   transition: all 0.3s;
+
+  @media (max-width: 1180px) {
+    max-width: 426px; // 태블릿에서는 기존 크기 유지
+    height: 44px;
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 320px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 393px) {
+    justify-content: center; // 모바일에서는 중앙 정렬
+    max-width: 280px;
+    height: 40px;
+    font-size: 1rem;
+  }
 }
 
 @mixin logo {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 40px;
-  justify-content: left;
   cursor: pointer;
 }
 
