@@ -47,9 +47,9 @@ body {
   align-items: center;
   width: 100%;
 }
-.lsi-signup-container .lsi-signup-form input[type=text],
-.lsi-signup-container .lsi-signup-form input[type=email],
-.lsi-signup-container .lsi-signup-form input[type=password] {
+.lsi-signup-container .lsi-signup-form input[type="text"],
+.lsi-signup-container .lsi-signup-form input[type="email"],
+.lsi-signup-container .lsi-signup-form input[type="password"] {
   width: 100%;
   height: 48px;
   padding: 1rem;
@@ -62,9 +62,9 @@ body {
   outline: none;
   width: 100%;
 }
-.lsi-signup-container .lsi-signup-form input[type=text]:focus,
-.lsi-signup-container .lsi-signup-form input[type=email]:focus,
-.lsi-signup-container .lsi-signup-form input[type=password]:focus {
+.lsi-signup-container .lsi-signup-form input[type="text"]:focus,
+.lsi-signup-container .lsi-signup-form input[type="email"]:focus,
+.lsi-signup-container .lsi-signup-form input[type="password"]:focus {
   border: 1px solid #00fffb;
   outline: none;
 }
@@ -89,7 +89,11 @@ body {
   align-items: center;
   gap: 10px;
 }
-.lsi-signup-container .lsi-signup-form .lsi-terms-container label input[type=checkbox] {
+.lsi-signup-container
+  .lsi-signup-form
+  .lsi-terms-container
+  label
+  input[type="checkbox"] {
   accent-color: #00fffb;
 }
 .lsi-signup-container .lsi-signup-form .lsi-terms-container label a {
@@ -99,7 +103,7 @@ body {
 }
 .lsi-signup-container .lsi-signup-form .lsi-terms-container label a:hover {
   -webkit-text-decoration: 2px underline;
-          text-decoration: 2px underline;
+  text-decoration: 2px underline;
 }
 .lsi-signup-container .lsi-signup-form .lsi-signup-btn {
   width: 100%;
