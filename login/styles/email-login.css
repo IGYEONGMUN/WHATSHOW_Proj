@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*==== lsi ====*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.lsi-email-login-container {
+  width: 600px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.lsi-email-login-header {
+  color: #c1c7cd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+.lsi-email-login-header h1 {
+  font-size: 3rem;
+  color: #00fffb;
+}
+.lsi-email-login-header .lsi-password-reset-link {
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.lsi-email-login-header .lsi-password-reset-link:hover {
+  color: #ffffff;
+}
+
+.lsi-email-login-content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+input {
+  width: 100%;
+  height: 48px;
+  padding: 1rem;
+  background: transparent;
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  border: 1px solid #c1c7cd;
+  border-radius: 5px;
+  outline: none;
+}
+input:focus {
+  border: 1px solid #00fffb;
+  outline: none;
+}
+
+.lsi-email-login-btn {
+  width: 100%;
+  height: 48px;
+  border: 2px solid #c1c7cd;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #c1c7cd;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.lsi-email-login-btn:hover {
+  color: #ffffff;
+  font-weight: bold;
+}
