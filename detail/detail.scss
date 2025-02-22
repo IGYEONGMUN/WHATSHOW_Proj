@@ -13,12 +13,12 @@ main {
     width: 1200px;
     height: 100%;
     border: 1px solid #f00;
-    .cdy-contents {
+    .cdy-contents01 {
       margin-top: 150px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 1200px;
+      width: 100%;
       gap: 20px;
       .img {
         border: 1px solid #f00;
@@ -121,18 +121,22 @@ main {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        .contitle {
+        h3 {
           display: flex;
           gap: 10px;
-          .fa-arrow-up {
+          i {
             line-height: 24px;
             color: map-get($map: $color, $key: main);
             transform: rotate(45deg);
           }
         }
-        .location-sub1 {
-          flex-direction: column;
+        .location-sub {
+          gap: 20px;
+          justify-content: center;
           text-align: center;
+          .location-sub1 {
+            margin-bottom: 15px;
+          }
           .lo-img {
             @include size-387-183;
             border: 1px solid #f00;
@@ -142,10 +146,10 @@ main {
       .cdy-ost {
         display: flex;
         flex-direction: column;
-        .contitle {
+        h3 {
           display: flex;
           gap: 10px;
-          .fa-arrow-up {
+          i {
             line-height: 24px;
             color: map-get($map: $color, $key: main);
             transform: rotate(45deg);
@@ -175,10 +179,10 @@ main {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        .contitle {
+        h3 {
           display: flex;
           gap: 10px;
-          .fa-arrow-up {
+          i {
             line-height: 24px;
             color: map-get($map: $color, $key: main);
             transform: rotate(45deg);
@@ -209,6 +213,188 @@ main {
           border: 1px solid dodgerblue;
           @include size-183-250;
         }
+      }
+    }
+  }
+}
+
+// tablet.ver
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  main {
+    section {
+      width: 940px;
+      height: 100%;
+      .cdy-contents01 {
+        .img {
+          @include size-556-364;
+        }
+      }
+      .cdy-contents02 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        h3 {
+          padding: 50px 50px;
+        }
+        .cdy-epi {
+          margin-top: 15px;
+          gap: 20px;
+          .epi {
+            .epi-img {
+              @include size-172-100;
+            }
+          }
+        }
+      }
+      .cdy-contents03 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .cdy-location {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          h3 {
+            order: 2;
+          }
+          .location-sub {
+            display: flex;
+            order: 1;
+            gap: 20px;
+            .location-sub1 {
+              .lo-img {
+                @include size-362-147;
+              }
+            }
+          }
+        }
+        .cdy-ost {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          .cdy-ostcon1 {
+            .ost-con {
+              .ost-img {
+                @include size-172-172;
+              }
+            }
+          }
+          .cdy-ostcon2 {
+            .ost-con {
+              .ost-img {
+                @include size-172-172;
+              }
+            }
+          }
+        }
+        .cdy-goods {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          h3 {
+            order: 2;
+          }
+          .goods-con1 {
+            order: 1;
+            .goodssub {
+              .goods-img {
+                @include size-172-172;
+              }
+            }
+          }
+        }
+      }
+      .cdy-contents04 {
+        display: none;
+      }
+    }
+  }
+}
+
+// mobile.ver
+@media screen and (max-width: 959px) {
+  main {
+    section {
+      width: 320px;
+      height: 100%;
+      .cdy-contents01 {
+        flex-direction: column;
+        .img {
+          @include size-320-250;
+        }
+        .cdy-container {
+          width: 100%;
+          margin: 0 auto;
+          .cdy-info {
+            width: 100%;
+            margin: 0 auto;
+          }
+          .cdy-actors {
+            display: none;
+          }
+        }
+      }
+      .cdy-contents02 {
+        .cdy-epi {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 5px;
+          .epi {
+            .epi-img {
+              @include size-160-77;
+            }
+          }
+        }
+      }
+      .cdy-contents03 {
+        flex-direction: column;
+        .cdy-location {
+          flex-direction: column;
+          .location-sub {
+            flex-direction: column;
+            .location-sub1 {
+              .lo-img {
+                width: 325px;
+                height: 80px;
+              }
+            }
+          }
+        }
+        .cdy-ost {
+          .cdy-ostcon1 {
+            gap: 5px;
+            .ost-con {
+              .ost-img {
+                @include size-160-160;
+              }
+            }
+          }
+          .cdy-ostcon2 {
+            gap: 5px;
+            .ost-con {
+              .ost-img {
+                @include size-160-160;
+              }
+            }
+          }
+        }
+        .cdy-goods {
+          .goods-con1 {
+            gap: 5px;
+            .goodssub {
+              .goods-img {
+                @include size-160-160;
+              }
+            }
+          }
+        }
+      }
+      .cdy-contents04 {
+        display: none;
       }
     }
   }
