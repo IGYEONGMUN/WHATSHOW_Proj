@@ -131,6 +131,7 @@ body {
           height: 500px;
           margin-left: 40px;
           background: #626268;
+
           border-radius: 10px;
           display: flex;
           justify-content: center;
@@ -142,6 +143,12 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            input {
+              padding-left: 5px;
+              &:focus {
+                outline: none;
+              }
+            }
             &:nth-child(1) {
               .inner_right_toptext {
                 width: 50px;
@@ -179,6 +186,26 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 960px) {
+  .main_inner {
+    .main_inner_content {
+      flex-direction: column;
+
+      .inner_right {
+        border: 1px solid #f00;
+        .inner_right_content1 {
+          &:nth-child(1) {
+            .inner_right_toptext {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*==button animation==*/
 
 .btn {
   display: flex;
@@ -304,6 +331,7 @@ h2 {
   background-size: 50px 50px;
   opacity: 0.5;
 }
+/*============================================================*/
 
 @keyframes animStar {
   from {
