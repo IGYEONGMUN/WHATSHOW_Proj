@@ -61,7 +61,7 @@ body {
     border-radius: 10px;
     margin-right: 50px;
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
   .lsi-container .lsi-login-section {
     display: flex;
@@ -248,14 +248,16 @@ body {
   .lsi-container .lsi-login-section .lsi-forgot-id {
     font-size: 1rem;
   }
+  .lsi-container .lsi-login-section .lsi-forgot-id button {
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    color: #00fffb;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .lsi-container .lsi-login-section .lsi-forgot-id button:hover {
+    color: #ffffff;
+  }
 }
-.lsi-container .lsi-login-section .lsi-forgot-id a {
-  color: #87cddb;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s;
-}
-.lsi-container .lsi-login-section .lsi-forgot-id a:hover {
-  color: #ffffff;
-} /*# sourceMappingURL=login.css.map */
