@@ -139,9 +139,9 @@ main {
       width: 100%;
       margin-top: 50px;
       overflow: hidden;
+      // 강제 적용시키기 위해 !important 부여
       .cdy-epi {
-        display: flex;
-
+        display: flex !important;
         margin-top: 15px;
         // margin-right: -60px;
         gap: 20px;
@@ -154,6 +154,45 @@ main {
         }
       }
     }
+    /*===== slick slider scss start =====*/
+    .slick-track {
+      display: flex !important;
+      gap: 20px;
+    }
+
+    .slick-slide {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      height: auto !important;
+    }
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    // 좌우 버튼 css
+    .slick-prev,
+    .slick-next {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 45%;
+      transform: translateY(-45%);
+      color: map-get($map: $color, $key: light);
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .slick-prev {
+      left: -40px;
+    }
+    .slick-next {
+      right: -40px;
+    }
+    /*===== slick slider scss end =====*/
     #cdy-contents03 {
       width: 100%;
       margin-top: 40px;

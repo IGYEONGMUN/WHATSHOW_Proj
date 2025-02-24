@@ -38,6 +38,8 @@ main section {
   width: 1200px;
   height: 100%;
   border: 1px solid #f00;
+  /*===== slick slider scss start =====*/
+  /*===== slick slider scss end =====*/
 }
 main section #cdy-contents01 {
   margin-top: 150px;
@@ -160,7 +162,7 @@ main section #cdy-contents02 {
   overflow: hidden;
 }
 main section #cdy-contents02 .cdy-epi {
-  display: flex;
+  display: flex !important;
   margin-top: 15px;
   gap: 20px;
 }
@@ -170,6 +172,38 @@ main section #cdy-contents02 .cdy-epi .epi .epi-img {
   width: 305px;
   height: 180px;
   border-radius: 5px;
+}
+main section .slick-track {
+  display: flex !important;
+  gap: 20px;
+}
+main section .slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: auto !important;
+}
+main section .slick-list {
+  overflow: hidden;
+}
+main section .slick-prev,
+main section .slick-next {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+main section .slick-prev {
+  left: -40px;
+}
+main section .slick-next {
+  right: -40px;
 }
 main section #cdy-contents03 {
   width: 100%;
