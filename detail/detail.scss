@@ -2,6 +2,14 @@
 @import "../styles/reset.scss";
 @import "../styles/variables.scss";
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
 main {
   width: 100%;
   background: map-get($map: $color, $key: dark);
@@ -9,11 +17,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  h3 {
+    font-size: 2.4rem;
+  }
   section {
     width: 1200px;
     height: 100%;
     border: 1px solid #f00;
-    .cdy-contents01 {
+    #cdy-contents01 {
       margin-top: 150px;
       display: flex;
       justify-content: space-between;
@@ -95,26 +106,27 @@ main {
         }
       }
     }
-    .cdy-contents02 {
+    #cdy-contents02 {
       width: 100%;
       margin-top: 50px;
       overflow: hidden;
       .cdy-epi {
         display: flex;
         margin-top: 15px;
+        // margin-right: -60px;
         gap: 20px;
         .epi {
           .epi-img {
             border: 1px solid #f00;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             @include size-305-180;
           }
         }
       }
     }
-    .cdy-contents03 {
+    #cdy-contents03 {
       width: 100%;
-      margin-top: 20px;
+      margin-top: 40px;
       display: flex;
       gap: 20px;
       .cdy-location {
@@ -125,17 +137,21 @@ main {
           display: flex;
           gap: 10px;
           i {
-            line-height: 24px;
+            line-height: 30px;
             color: map-get($map: $color, $key: main);
             transform: rotate(45deg);
           }
         }
         .location-sub {
-          gap: 20px;
-          justify-content: center;
+          gap: 15px;
           text-align: center;
+          display: flex;
+          flex-direction: column;
           .location-sub1 {
-            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
           }
           .lo-img {
             @include size-387-183;
@@ -150,7 +166,7 @@ main {
           display: flex;
           gap: 10px;
           i {
-            line-height: 24px;
+            line-height: 30px;
             color: map-get($map: $color, $key: main);
             transform: rotate(45deg);
           }
@@ -159,19 +175,29 @@ main {
           display: flex;
           gap: 20px;
           text-align: center;
-          margin: 15px 0;
-          .ost-img {
-            @include size-183-183;
-            border: 1px solid #f00;
+          margin: 15px 0 15px 0;
+          .ost-con {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .ost-img {
+              @include size-183-183;
+              border: 1px solid #f00;
+            }
           }
         }
         .cdy-ostcon2 {
           display: flex;
           gap: 20px;
           text-align: center;
-          .ost-img {
-            @include size-183-183;
-            border: 1px solid #f00;
+          .ost-con {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .ost-img {
+              @include size-183-183;
+              border: 1px solid #f00;
+            }
           }
         }
       }
@@ -183,7 +209,7 @@ main {
           display: flex;
           gap: 10px;
           i {
-            line-height: 24px;
+            line-height: 30px;
             color: map-get($map: $color, $key: main);
             transform: rotate(45deg);
           }
@@ -192,6 +218,11 @@ main {
           display: flex;
           text-align: center;
           gap: 20px;
+          .goodssub {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+          }
           .goods-img {
             @include size-183-183;
             border: 1px solid #f00;
@@ -199,11 +230,11 @@ main {
         }
       }
     }
-    .cdy-contents04 {
+    #cdy-contents04 {
       width: 100%;
       gap: 15px;
       margin-bottom: 15px;
-      margin-top: 20px;
+      margin-top: 40px;
       .cdy-cons {
         width: 100%;
         display: flex;
@@ -224,12 +255,28 @@ main {
     section {
       width: 940px;
       height: 100%;
-      .cdy-contents01 {
+      #cdy-contents01 {
+        width: 100%;
         .img {
           @include size-556-364;
         }
+        .cdy-container {
+          width: 357px;
+          margin: 0 auto;
+          gap: 5px;
+          height: 364px;
+          .cdy-info {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            gap: 5px;
+          }
+          .cdy-actors {
+            display: none;
+          }
+        }
       }
-      .cdy-contents02 {
+      #cdy-contents02 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -247,7 +294,7 @@ main {
           }
         }
       }
-      .cdy-contents03 {
+      #cdy-contents03 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -255,12 +302,13 @@ main {
           flex-direction: row;
           justify-content: center;
           align-items: center;
-
           h3 {
             order: 2;
+            margin-top: -40px;
           }
           .location-sub {
             display: flex;
+            flex-direction: row;
             order: 1;
             gap: 20px;
             .location-sub1 {
@@ -275,6 +323,9 @@ main {
           justify-content: center;
           align-items: center;
           gap: 20px;
+          h3 {
+            margin-top: -20px;
+          }
           .cdy-ostcon1 {
             .ost-con {
               .ost-img {
@@ -297,6 +348,7 @@ main {
           gap: 20px;
           h3 {
             order: 2;
+            margin-top: -40px;
           }
           .goods-con1 {
             order: 1;
@@ -308,7 +360,7 @@ main {
           }
         }
       }
-      .cdy-contents04 {
+      #cdy-contents04 {
         display: none;
       }
     }
@@ -319,9 +371,9 @@ main {
 @media screen and (max-width: 959px) {
   main {
     section {
-      width: 320px;
+      width: 326px;
       height: 100%;
-      .cdy-contents01 {
+      #cdy-contents01 {
         flex-direction: column;
         .img {
           @include size-320-250;
@@ -331,35 +383,64 @@ main {
           margin: 0 auto;
           .cdy-info {
             width: 100%;
-            margin: 0 auto;
+            margin: 20px 0;
+            .tag {
+              font-size: 1.4rem;
+            }
+            ul {
+              li {
+                h3 {
+                  font-size: 1.6rem;
+                }
+                p {
+                  font-size: 1.2rem;
+                }
+              }
+            }
           }
           .cdy-actors {
             display: none;
           }
         }
       }
-      .cdy-contents02 {
+      #cdy-contents02 {
+        margin-top: -5rem;
+        h3 {
+          font-size: 1.6rem;
+        }
         .cdy-epi {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          display: flex;
+          // grid-template-columns: repeat(2, 1fr);
           gap: 5px;
           .epi {
+            p {
+              font-size: 1.2rem;
+            }
             .epi-img {
               @include size-160-77;
             }
           }
         }
       }
-      .cdy-contents03 {
+      #cdy-contents03 {
         flex-direction: column;
+        h3 {
+          font-size: 1.6rem;
+          line-height: 20px;
+          border: 1px solid #f00;
+
+          i {
+          }
+        }
         .cdy-location {
           flex-direction: column;
           .location-sub {
             flex-direction: column;
             .location-sub1 {
+              font-size: 1.2rem;
               .lo-img {
                 width: 325px;
-                height: 80px;
+                height: 160px;
               }
             }
           }
@@ -368,6 +449,7 @@ main {
           .cdy-ostcon1 {
             gap: 5px;
             .ost-con {
+              font-size: 1.2rem;
               .ost-img {
                 @include size-160-160;
               }
@@ -376,6 +458,7 @@ main {
           .cdy-ostcon2 {
             gap: 5px;
             .ost-con {
+              font-size: 1.2rem;
               .ost-img {
                 @include size-160-160;
               }
@@ -386,6 +469,7 @@ main {
           .goods-con1 {
             gap: 5px;
             .goodssub {
+              font-size: 1.2rem;
               .goods-img {
                 @include size-160-160;
               }
@@ -393,7 +477,7 @@ main {
           }
         }
       }
-      .cdy-contents04 {
+      #cdy-contents04 {
         display: none;
       }
     }
