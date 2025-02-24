@@ -301,26 +301,49 @@ body {
 .lgm_footer_section {
   color: map-get($map: $color, $key: light);
   width: 100%;
-  height: 500px;
+  height: 240px;
   background: map-get($map: $color, $key: dark);
   display: flex;
   justify-content: center;
   .lgm_footer {
     width: 1200px;
     height: 100%;
-    border: 1px solid #f00;
     .lgm_footer_inner {
-      &:nth-of-type(1) {
-        background: map-get($map: $color, $key: accent);
+      &:nth-child(1) {
+        p {
+          font-weight: bold;
+          font-size: 2.4rem;
+          color: map-get($map: $color, $key: main);
+        }
+        .lgm_footer_inner_top1 {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 28px;
+        }
+        hr {
+          margin-bottom: 30px;
+          color: map-get($map: $color, $key: sub-03);
+        }
+        .footer_top_right {
+          a {
+            margin-left: 36px;
+          }
+        }
       }
-      &:nth-of-type(2) {
-        background: map-get($map: $color, $key: accent);
+      &:nth-child(2) {
+        p {
+          font-size: 1.4rem;
+          line-height: 180%;
+        }
+        margin-bottom: 30px;
       }
-      &:nth-of-type(3) {
+      &:nth-child(3) {
         display: flex;
         justify-content: space-between;
         .footer_icon {
-          border: 1px solid #f00;
+          i {
+            margin-left: 20px;
+          }
         }
       }
     }
