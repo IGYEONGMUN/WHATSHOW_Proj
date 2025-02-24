@@ -257,6 +257,34 @@ body {
 #mobile-container {
   display: none;
 }
+.lgm_footer_section {
+  color: map-get($map: $color, $key: light);
+  width: 100%;
+  height: 500px;
+  background: map-get($map: $color, $key: dark);
+  display: flex;
+  justify-content: center;
+  .lgm_footer {
+    width: 1200px;
+    height: 100%;
+    border: 1px solid #f00;
+    .lgm_footer_inner {
+      &:nth-of-type(1) {
+        background: map-get($map: $color, $key: accent);
+      }
+      &:nth-of-type(2) {
+        background: map-get($map: $color, $key: accent);
+      }
+      &:nth-of-type(3) {
+        display: flex;
+        justify-content: space-between;
+        .footer_icon {
+          border: 1px solid #f00;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 960px) and (max-width: 1199px) {
   #web-container {
