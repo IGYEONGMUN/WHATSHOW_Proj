@@ -183,5 +183,6 @@ body {
   transition: all 0.3s;
 }
 .lsi-container .lsi-login-section .lsi-forgot-id a:hover {
-  color: #ffffff;
-} /*# sourceMappingURL=login.css.map */
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+}
