@@ -1,1 +1,541 @@
-/*# sourceMappingURL=detail.css.map */
+/*==== lsi ====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+main {
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main h3 {
+  font-size: 2.4rem;
+}
+main section {
+  width: 1200px;
+  height: 100%;
+  border: 1px solid #f00;
+}
+main section #cdy-contents01 {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+main section #cdy-contents01 .img {
+  border: 1px solid #f00;
+  width: 590px;
+  height: 381px;
+  border-radius: 5px;
+  position: relative;
+}
+main section #cdy-contents01 .img .maintitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+main section #cdy-contents01 .img .maintitle h1 {
+  font-size: 4.2rem;
+}
+main section #cdy-contents01 .img .maintitle .playbtn {
+  display: flex;
+  font-size: 2rem;
+  gap: 20px;
+  align-items: center;
+}
+main section #cdy-contents01 .img .maintitle .playbtn p {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000000;
+  opacity: 0.7;
+}
+main section #cdy-contents01 .img .maintitle .playbtn .fa-arrow-right-to-bracket {
+  transform: rotate(90deg);
+}
+main section #cdy-contents01 .cdy-container {
+  display: flex;
+  width: 584px;
+  height: 381px;
+  gap: 40px;
+}
+main section #cdy-contents01 .cdy-container .cdy-info {
+  width: 361px;
+  height: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+main section #cdy-contents01 .cdy-container .cdy-info .tag {
+  display: flex;
+  gap: 5px;
+}
+main section #cdy-contents01 .cdy-container .cdy-info .tag .tag01 {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  padding: 5px;
+}
+main section #cdy-contents01 .cdy-container .cdy-info .tag .tag02 {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+}
+main section #cdy-contents01 .cdy-container .cdy-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main section #cdy-contents01 .cdy-container .cdy-info ul li {
+  gap: 5px;
+}
+main section #cdy-contents01 .cdy-container .cdy-info ul li h3 {
+  font-size: 24px;
+}
+main section #cdy-contents01 .cdy-container .cdy-info ul li p {
+  font-size: 16px;
+}
+main section #cdy-contents01 .cdy-container .cdy-actors {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main section #cdy-contents01 .cdy-container .cdy-actors .actors {
+  display: flex;
+  gap: 10px;
+}
+main section #cdy-contents01 .cdy-container .cdy-actors .actors-left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+main section #cdy-contents01 .cdy-container .cdy-actors .actors-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+main section #cdy-contents01 .cdy-container .cdy-actors .actor {
+  border: 1px solid #f00;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+main section #cdy-contents02 {
+  width: 100%;
+  margin-top: 50px;
+  overflow: hidden;
+}
+main section #cdy-contents02 .cdy-epi {
+  display: flex;
+  margin-top: 15px;
+  gap: 20px;
+}
+main section #cdy-contents02 .cdy-epi .epi .epi-img {
+  border: 1px solid #f00;
+  margin-bottom: 5px;
+  width: 305px;
+  height: 180px;
+  border-radius: 5px;
+}
+main section #cdy-contents03 {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+main section #cdy-contents03 .cdy-location {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main section #cdy-contents03 .cdy-location h3 {
+  display: flex;
+  gap: 10px;
+}
+main section #cdy-contents03 .cdy-location h3 i {
+  line-height: 30px;
+  color: #00fffb;
+  transform: rotate(45deg);
+}
+main section #cdy-contents03 .cdy-location .location-sub {
+  gap: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+main section #cdy-contents03 .cdy-location .location-sub .location-sub1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+main section #cdy-contents03 .cdy-location .location-sub .lo-img {
+  width: 387px;
+  height: 183px;
+  border-radius: 5px;
+  border: 1px solid #f00;
+}
+main section #cdy-contents03 .cdy-ost {
+  display: flex;
+  flex-direction: column;
+}
+main section #cdy-contents03 .cdy-ost h3 {
+  display: flex;
+  gap: 10px;
+}
+main section #cdy-contents03 .cdy-ost h3 i {
+  line-height: 30px;
+  color: #00fffb;
+  transform: rotate(45deg);
+}
+main section #cdy-contents03 .cdy-ost .cdy-ostcon1 {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  margin: 15px 0 15px 0;
+}
+main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img {
+  width: 183px;
+  height: 183px;
+  border-radius: 5px;
+  border: 1px solid #f00;
+}
+main section #cdy-contents03 .cdy-ost .cdy-ostcon2 {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img {
+  width: 183px;
+  height: 183px;
+  border-radius: 5px;
+  border: 1px solid #f00;
+}
+main section #cdy-contents03 .cdy-goods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main section #cdy-contents03 .cdy-goods h3 {
+  display: flex;
+  gap: 10px;
+}
+main section #cdy-contents03 .cdy-goods h3 i {
+  line-height: 30px;
+  color: #00fffb;
+  transform: rotate(45deg);
+}
+main section #cdy-contents03 .cdy-goods .goods-con1 {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+}
+main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main section #cdy-contents03 .cdy-goods .goods-con1 .goods-img {
+  width: 183px;
+  height: 183px;
+  border-radius: 5px;
+  border: 1px solid #f00;
+}
+main section #cdy-contents04 {
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+main section #cdy-contents04 .cdy-cons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+main section #cdy-contents04 .cdy-cons .sub {
+  border: 1px solid dodgerblue;
+  width: 183px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  main section {
+    width: 940px;
+    height: 100%;
+  }
+  main section #cdy-contents01 {
+    width: 100%;
+  }
+  main section #cdy-contents01 .img {
+    width: 556px;
+    height: 364px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents01 .cdy-container {
+    width: 357px;
+    margin: 0 auto;
+    gap: 5px;
+    height: 364px;
+  }
+  main section #cdy-contents01 .cdy-container .cdy-info {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    gap: 5px;
+  }
+  main section #cdy-contents01 .cdy-container .cdy-actors {
+    display: none;
+  }
+  main section #cdy-contents02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  main section #cdy-contents02 h3 {
+    padding: 50px 50px;
+  }
+  main section #cdy-contents02 .cdy-epi {
+    margin-top: 15px;
+    gap: 20px;
+  }
+  main section #cdy-contents02 .cdy-epi .epi .epi-img {
+    width: 172px;
+    height: 100px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents03 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main section #cdy-contents03 .cdy-location {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  main section #cdy-contents03 .cdy-location h3 {
+    order: 2;
+    margin-top: -40px;
+  }
+  main section #cdy-contents03 .cdy-location .location-sub {
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    gap: 20px;
+  }
+  main section #cdy-contents03 .cdy-location .location-sub .location-sub1 .lo-img {
+    width: 362px;
+    height: 147px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents03 .cdy-ost {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  main section #cdy-contents03 .cdy-ost h3 {
+    margin-top: -20px;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img {
+    width: 172px;
+    height: 172px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img {
+    width: 172px;
+    height: 172px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents03 .cdy-goods {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  main section #cdy-contents03 .cdy-goods h3 {
+    order: 2;
+    margin-top: -40px;
+  }
+  main section #cdy-contents03 .cdy-goods .goods-con1 {
+    order: 1;
+  }
+  main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub .goods-img {
+    width: 172px;
+    height: 172px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents04 {
+    display: none;
+  }
+}
+@media screen and (max-width: 959px) {
+  main section {
+    width: 326px;
+    height: 100%;
+  }
+  main section #cdy-contents01 {
+    flex-direction: column;
+  }
+  main section #cdy-contents01 .img {
+    width: 320px;
+    height: 250px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents01 .img .maintitle {
+    bottom: 20px;
+    left: 20px;
+  }
+  main section #cdy-contents01 .img .maintitle h1 {
+    font-size: 2.4rem;
+  }
+  main section #cdy-contents01 .img .maintitle .playbtn {
+    font-size: 1.6rem;
+    gap: 10px;
+  }
+  main section #cdy-contents01 .img .maintitle .playbtn p {
+    padding: 5px;
+  }
+  main section #cdy-contents01 .cdy-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  main section #cdy-contents01 .cdy-container .cdy-info {
+    width: 100%;
+    margin: 20px 0;
+  }
+  main section #cdy-contents01 .cdy-container .cdy-info .tag {
+    font-size: 1.4rem;
+  }
+  main section #cdy-contents01 .cdy-container .cdy-info ul li h3 {
+    font-size: 1.6rem;
+  }
+  main section #cdy-contents01 .cdy-container .cdy-info ul li p {
+    font-size: 1.2rem;
+  }
+  main section #cdy-contents01 .cdy-container .cdy-actors {
+    display: none;
+  }
+  main section #cdy-contents02 {
+    margin-top: -5rem;
+  }
+  main section #cdy-contents02 h3 {
+    font-size: 1.6rem;
+  }
+  main section #cdy-contents02 .cdy-epi {
+    display: flex;
+    gap: 5px;
+  }
+  main section #cdy-contents02 .cdy-epi .epi p {
+    font-size: 1.2rem;
+  }
+  main section #cdy-contents02 .cdy-epi .epi .epi-img {
+    width: 160px;
+    height: 77px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents03 {
+    flex-direction: column;
+  }
+  main section #cdy-contents03 h3 {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+  main section #cdy-contents03 .cdy-location {
+    flex-direction: column;
+  }
+  main section #cdy-contents03 .cdy-location .location-sub {
+    flex-direction: column;
+  }
+  main section #cdy-contents03 .cdy-location .location-sub .location-sub1 {
+    font-size: 1.2rem;
+  }
+  main section #cdy-contents03 .cdy-location .location-sub .location-sub1 .lo-img {
+    width: 325px;
+    height: 160px;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 {
+    gap: 5px;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con {
+    font-size: 1.2rem;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 {
+    gap: 5px;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con {
+    font-size: 1.2rem;
+  }
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents03 .cdy-goods .goods-con1 {
+    gap: 5px;
+  }
+  main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub {
+    font-size: 1.2rem;
+  }
+  main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub .goods-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+  }
+  main section #cdy-contents04 {
+    display: none;
+  }
+}

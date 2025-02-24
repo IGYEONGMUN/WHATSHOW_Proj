@@ -11,7 +11,7 @@ $(document).ready(function () {
     arrows: true, // 이전/다음 버튼 표시
     // dots: true, // 네비게이션 점 표시
     // arrows: true,
-    infinite: true, // 무한 루프 설정
+    infinite: false, // 무한 루프 설정
     responsive: [
       {
         breakpoint: 768,
@@ -26,7 +26,7 @@ $(document).ready(function () {
 hovers.forEach((hover) => {
   hover.addEventListener("mouseover", () => {
     hover.style.transition = "all 0.3s";
-    hover.style.transform = "rotate(45deg) translateY(-25px)";
+    hover.style.transform = "rotate(45deg) translateY(-20%)";
     // hover.style.boxShadow = "0 0 8px #00fffb";
     // hover.style.boxShadow = "0 0 8px #00fffb";
   });
