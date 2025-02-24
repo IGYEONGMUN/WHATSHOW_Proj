@@ -49,33 +49,73 @@ body {
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
-      .inner-right {
+      .inner-left {
         display: flex;
         align-items: center;
-        gap: 20px;
-        input[type="text"] {
-          width: 400px;
-          height: 40px;
-          padding: 0 20px;
-          border: none;
-          border-bottom: 1px solid map-get($map: $color, $key: btn-bg);
-          font-size: 1.6rem;
-          background-color: transparent;
-          color: map-get($map: $color, $key: light);
-          &::placeholder {
-            transition: all 0.5s;
-            opacity: 1;
-          }
-          &:focus {
-            outline: none;
-            &::placeholder {
-              opacity: 0;
+        gap: 100px;
+
+        h2 {
+          font-size: 3.2rem;
+          color: map-get($map: $color, $key: main);
+        }
+        .category {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          h4 {
+            color: map-get($map: $color, $key: btn-bg);
+            cursor: pointer;
+            transition: all 0.4s;
+            &:hover {
+              color: map-get($map: $color, $key: main);
+              text-decoration: underline;
+              text-underline-offset: 6px;
             }
           }
         }
-        .fa-magnifying-glass {
-          font-size: 2.4rem;
-          color: #fff;
+      }
+      .inner-right {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .search-bar {
+          width: 300px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid map-get($map: $color, $key: btn-bg);
+          padding: 0 10px;
+          input[type="text"] {
+            width: 200px;
+            height: 40px;
+            border: none;
+            font-size: 1.6rem;
+            background-color: transparent;
+            color: map-get($map: $color, $key: light);
+            &::placeholder {
+              transition: all 0.5s;
+              opacity: 1;
+            }
+            &:focus {
+              outline: none;
+              &::placeholder {
+                opacity: 0;
+              }
+            }
+          }
+          .fa-magnifying-glass {
+            font-size: 2.4rem;
+            color: map-get($map: $color, $key: btn-bg);
+          }
+        }
+        .menu-icon {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          i {
+            font-size: 2.4rem;
+            color: map-get($map: $color, $key: btn-bg);
+          }
         }
       }
     }
@@ -87,6 +127,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 100px;
+    padding-top: 100px;
     .smk-content-01 {
       display: flex;
       flex-direction: column;
@@ -271,7 +312,99 @@ body {
     justify-content: center;
     align-items: center;
     padding: 100px 0;
-
+    header {
+      width: 100%;
+      height: 100px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: map-get($map: $color, $key: page-bg);
+      z-index: 2;
+      .header-inner {
+        width: 940px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        .inner-left {
+          display: flex;
+          align-items: center;
+          gap: 50px;
+          h2 {
+            font-size: 2.4rem;
+            color: map-get($map: $color, $key: main);
+          }
+          .category {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            h4 {
+              font-size: 1.4rem;
+              color: map-get($map: $color, $key: btn-bg);
+              cursor: pointer;
+              transition: all 0.4s;
+              &:hover {
+                color: map-get($map: $color, $key: main);
+                text-decoration: underline;
+                text-underline-offset: 6px;
+              }
+            }
+          }
+        }
+        .inner-right {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          .search-bar {
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid map-get($map: $color, $key: btn-bg);
+            padding: 0 10px;
+            input[type="text"] {
+              width: 250px;
+              height: 40px;
+              border: none;
+              font-size: 1.6rem;
+              background-color: transparent;
+              color: map-get($map: $color, $key: light);
+              &::placeholder {
+                transition: all 0.5s;
+                opacity: 1;
+              }
+              &:focus {
+                outline: none;
+                &::placeholder {
+                  opacity: 0;
+                }
+              }
+            }
+            .fa-magnifying-glass {
+              font-size: 1.6rem;
+              color: map-get($map: $color, $key: btn-bg);
+            }
+          }
+          .menu-icon {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            i {
+              font-size: 1.6rem;
+              color: map-get($map: $color, $key: btn-bg);
+            }
+          }
+        }
+      }
+    }
     .smk-content-inner {
       width: 940px;
       height: 100%;
@@ -279,6 +412,7 @@ body {
       flex-direction: column;
       justify-content: center;
       gap: 100px;
+      padding-top: 100px;
       .smk-content-01 {
         display: flex;
         gap: 20px;
@@ -455,8 +589,40 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
-
+    padding: 50px 0;
+    header {
+      width: 100%;
+      height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: map-get($map: $color, $key: page-bg);
+      z-index: 2;
+      .header-inner {
+        width: 326px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        .inner-left {
+          display: flex;
+          align-items: center;
+          gap: 50px;
+          h2 {
+            font-size: 1.2rem;
+            color: map-get($map: $color, $key: main);
+          }
+        }
+      }
+    }
     .smk-content-inner {
       width: 326px;
       height: 100%;
@@ -464,6 +630,7 @@ body {
       flex-direction: column;
       justify-content: center;
       gap: 50px;
+      padding-top: 50px;
       .smk-content-01 {
         display: flex;
         gap: 5px;

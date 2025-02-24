@@ -51,3 +51,9 @@ hoversStop.forEach((hoverStop) => {
     hoverStop.style.animationPlayState = "running";
   });
 });
+
+const trigger = document.querySelector(".trigger");
+trigger.addEventListener("click", function () {
+  this.classList.toggle("active");
+  document.querySelector(".gnb").classList.toggle("active");
+});
