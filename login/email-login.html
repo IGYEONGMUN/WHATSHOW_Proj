@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/email-login.css" />
-    <script src="./js/email-login.js"></script>
+    <script defer src="./js/email-login.js"></script>
     <title>WHATSHOW|이메일 로그인</title>
   </head>
   <body>
@@ -12,29 +12,25 @@
       <header class="lsi-email-login-header">
         <h1>로그인</h1>
         <div class="lsi-a-group">
-          <a href="./reset-password.html" class="lsi-password-reset-link"
-            >비밀번호 재설정</a
-          >
+          <button class="lsi-password-reset-link">비밀번호 재설정</button>
           |
-          <a href="./signup.html" class="lsi-password-reset-link">회원가입</a>
+          <button class="lsi-signup-link">회원가입</button>
           |
-          <a href="./find-id.html" class="lsi-password-reset-link">계정찾기</a>
+          <button class="lsi-find-link">계정찾기</button>
         </div>
       </header>
-      <form class="lsi-email-login-form">
+      <form class="lsi-email-login-form" method="post">
         <input
           type="email"
           placeholder="이메일을 입력하세요."
-          required
           class="lsi-email-input"
         />
         <input
           type="password"
           placeholder="비밀번호를 입력하세요."
-          required
           class="lsi-password-input"
         />
-        <button type="submit" class="lsi-email-login-btn">로그인</button>
+        <input type="submit" class="lsi-email-login-btn" value="로그인" />
       </form>
     </main>
   </body>
