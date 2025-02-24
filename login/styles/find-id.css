@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -30,73 +31,267 @@ body {
   overflow: hidden;
 }
 
-.lsi-find-id-container {
-  width: 600px;
-  padding: 2rem;
-  text-align: center;
+@media screen and (min-width: 1200px) and (max-width: 1920px) {
+  .lsi-find-id-container {
+    width: 500px;
+    padding: 2rem;
+    text-align: center;
+  }
+  .lsi-find-id-container h1 {
+    font-size: 4rem;
+    color: #00fffb;
+    margin-bottom: 4rem;
+  }
+  .lsi-find-id-container .lsi-find-section {
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+  .lsi-find-id-container .lsi-find-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #c1c7cd;
+  }
+  .lsi-find-id-container .lsi-find-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #c1c7cd;
+  }
+  .lsi-find-id-container .lsi-find-section input[type=text] {
+    width: 100%;
+    height: 48px;
+    padding: 1rem;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border: 1px solid #c1c7cd;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .lsi-find-id-container .lsi-find-section input[type=text]:focus {
+    border: 1px solid #00fffb;
+    outline: none;
+  }
+  .lsi-find-id-container .lsi-find-section .lsi-find-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: 1px solid #c1c7cd;
+    border-radius: 5px;
+    background: none;
+    color: #c1c7cd;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+  }
+  .lsi-find-id-container .lsi-find-section .lsi-find-btn:hover {
+    color: #ffffff;
+  }
+  .lsi-find-id-container .lsi-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #00fffb;
+    margin: 6rem 0;
+    gap: 15px;
+  }
+  .lsi-find-id-container .lsi-separator::before, .lsi-find-id-container .lsi-separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #00fffb;
+    margin: 0 5px;
+  }
+  /* 모달 배경 */
+  .auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 어두운 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  /* 모달 컨텐츠 */
+  .auth-modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+    opacity: 1;
+  }
+  .modal-title {
+    margin-bottom: 10px;
+  }
+  .modal-text {
+    font-size: 1.2rem;
+  }
+  .auth-modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #c1c7cd;
+    border-radius: 5px;
+  }
+  .auth-modal-content button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #00fffb;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .close {
+    background: #00fffb;
+  }
 }
-.lsi-find-id-container h1 {
-  font-size: 4rem;
-  color: #00fffb;
-  margin-bottom: 4rem;
+@media screen and (max-width: 1180px) {
+  .lsi-find-id-container {
+    width: 400px;
+    padding: 2rem;
+  }
+  .lsi-find-id-container h1 {
+    color: #00fffb;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .lsi-find-id-container .lsi-find-section {
+    margin-bottom: 3rem;
+  }
+  .lsi-find-id-container .lsi-find-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #c1c7cd;
+  }
+  .lsi-find-id-container .lsi-find-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #c1c7cd;
+  }
+  .lsi-find-id-container .lsi-find-section input[type=text] {
+    width: 100%;
+    height: 48px;
+    padding: 1rem;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border: 1px solid #c1c7cd;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .lsi-find-id-container .lsi-find-section input[type=text]:focus {
+    border: 1px solid #00fffb;
+    outline: none;
+  }
+  .lsi-find-id-container .lsi-find-section .lsi-find-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: 1px solid #c1c7cd;
+    border-radius: 5px;
+    background: none;
+    color: #c1c7cd;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+  }
+  .lsi-find-id-container .lsi-find-section .lsi-find-btn:hover {
+    color: #ffffff;
+  }
+  .lsi-find-id-container .lsi-separator {
+    font-size: 1.4rem;
+    margin: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00fffb;
+    gap: 15px;
+  }
+  .lsi-find-id-container .lsi-separator::before, .lsi-find-id-container .lsi-separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #00fffb;
+    margin: 0 5px;
+  }
 }
-.lsi-find-id-container .lsi-find-section {
-  margin-bottom: 4rem;
-  text-align: left;
-}
-.lsi-find-id-container .lsi-find-section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-  color: #c1c7cd;
-}
-.lsi-find-id-container .lsi-find-section p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #c1c7cd;
-}
-.lsi-find-id-container .lsi-find-section input[type=text] {
-  width: 100%;
-  height: 48px;
-  padding: 1rem;
-  background: transparent;
-  color: #ffffff;
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  border: 1px solid #c1c7cd;
-  border-radius: 5px;
-  outline: none;
-}
-.lsi-find-id-container .lsi-find-section input[type=text]:focus {
-  border: 1px solid #00fffb;
-  outline: none;
-}
-.lsi-find-id-container .lsi-find-section .lsi-find-btn {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.8rem;
-  border: 1px solid #c1c7cd;
-  border-radius: 5px;
-  background: none;
-  color: #c1c7cd;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.lsi-find-id-container .lsi-find-section .lsi-find-btn:hover {
-  color: #ffffff;
-}
-.lsi-find-id-container .lsi-separator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  color: #00fffb;
-  margin: 6rem 0;
-  gap: 15px;
-}
-.lsi-find-id-container .lsi-separator::before, .lsi-find-id-container .lsi-separator::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background-color: #00fffb;
-  margin: 0 5px;
+@media screen and (max-width: 500px) {
+  .lsi-find-id-container {
+    width: 60%;
+    padding: 1.5rem;
+  }
+  .lsi-find-id-container h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .lsi-find-id-container .lsi-find-section {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  .lsi-find-id-container .lsi-find-section h2 {
+    font-size: 1.8rem;
+  }
+  .lsi-find-id-container .lsi-find-section p {
+    font-size: 1.1rem;
+  }
+  .lsi-find-id-container .lsi-find-section input[type=text] {
+    width: 100%;
+    height: 48px;
+    padding: 1rem;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border: 1px solid #c1c7cd;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .lsi-find-id-container .lsi-find-section input[type=text]:focus {
+    border: 1px solid #00fffb;
+    outline: none;
+  }
+  .lsi-find-id-container .lsi-find-section .lsi-find-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: 1px solid #c1c7cd;
+    border-radius: 5px;
+    background: none;
+    color: #c1c7cd;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 100%;
+  }
+  .lsi-find-id-container .lsi-find-section .lsi-find-btn:hover {
+    color: #ffffff;
+  }
+  .lsi-find-id-container .lsi-separator {
+    font-size: 1.2rem;
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00fffb;
+    gap: 15px;
+  }
+  .lsi-find-id-container .lsi-separator::before, .lsi-find-id-container .lsi-separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #00fffb;
+    margin: 0 5px;
+  }
 }/*# sourceMappingURL=find-id.css.map */
