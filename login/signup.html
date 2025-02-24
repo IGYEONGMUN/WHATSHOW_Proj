@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/signup.css" />
-    <script src="./js/signup.js"></script>
+    <script defer src="./js/signup.js"></script>
     <title>WHATSHOW|회원가입</title>
   </head>
   <body>
@@ -12,12 +12,13 @@
       <h1>회원가입</h1>
       <form class="lsi-signup-form">
         <input type="text" placeholder="이름을 입력하세요." required />
+        <span class="email-error lsi-error-message"></span>
         <input type="email" placeholder="이메일을 입력하세요." required />
         <p class="lsi-email-info">
           ※ 결제 등 중요 정보 알림, 로그인, 비밀번호 찾기에 사용돼요.
         </p>
         <input type="password" placeholder="비밀번호를 입력하세요." required />
-
+        <span class="password-error lsi-error-message"></span>
         <div class="lsi-terms-container">
           <label><input type="checkbox" /> 전체 약관에 동의 합니다.</label>
           <label><input type="checkbox" /> 만 14세 이상입니다.</label>
@@ -39,7 +40,7 @@
           >
         </div>
 
-        <button type="submit" class="lsi-signup-btn">가입하기</button>
+        <input type="submit" class="lsi-signup-btn" value="가입하기" />
       </form>
     </div>
   </body>
