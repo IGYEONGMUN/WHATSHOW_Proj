@@ -18,116 +18,223 @@ body {
   overflow: hidden;
 }
 
-.lsi-container {
-  width: 100%;
-  max-width: 1920px;
-  height: 100vh;
-  max-height: 1000px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .lsi-logo {
-    @include logo();
-    font-size: 4rem;
-
-    @media (max-width: 1180px) {
-      font-size: 3rem;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 2.5rem;
-    }
-
-    @media (max-width: 393px) {
-      font-size: 1.5rem;
-    }
-  }
-
-  .lsi-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media screen and (min-width: 1200px) and (max-width: 1920px) {
+  .lsi-container {
     width: 100%;
-    padding: 5vh;
-
-    @media (max-width: 1180px) {
-      flex-direction: column;
-      padding: 2vh;
-    }
-  }
-
-  .lsi-login-section {
+    max-width: 1920px;
+    height: 100vh;
+    max-height: 1000px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
 
-    h2 {
-      font-size: 3rem;
+    .lsi-logo {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      cursor: pointer;
+    }
 
-      @media (max-width: 1180px) {
-        font-size: 1.2rem;
-      }
+    .lsi-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5vh;
 
-      @media (max-width: 768px) {
-        font-size: 1rem;
-      }
-
-      @media (max-width: 393px) {
-        font-size: 1rem;
+      .lsi-poster img {
+        width: 450px;
+        height: 450px;
+        border-radius: 10px;
+        margin-right: 50px;
+        object-fit: contain;
       }
     }
 
-    .lsi-login-btn {
-      @include loginBtn();
+    .lsi-login-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
 
-      span {
-        margin-right: 10px;
+      h2 {
+        font-size: 3rem;
+      }
 
-        img {
-          transition: all 0.3s;
-          width: 22px;
-          height: 22px;
+      .lsi-login-btn {
+        @include loginBtn();
+        width: 426px;
+        padding: 15px;
+        font-size: 1.6rem;
 
-          @media (max-width: 768px) {
-            width: 18px;
-            height: 18px;
+        span {
+          margin-right: 10px;
+
+          img {
+            transition: all 0.3s;
           }
+        }
 
-          @media (max-width: 393px) {
-            width: 16px;
-            height: 16px;
-          }
+        &:hover {
+          color: map-get($map: $color, $key: light);
         }
       }
 
-      &:hover {
-        color: map-get($map: $color, $key: light);
+      .lsi-forgot-id {
+        font-size: 1.6rem;
+        color: map-get($map: $color, $key: main);
+
+        button {
+          font-size: 1.6rem;
+          border: none;
+          background: transparent;
+          color: map-get($map: $color, $key: main);
+          text-decoration: underline;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: map-get($map: $color, $key: light);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .lsi-container {
+    width: 100%;
+    max-width: 1180px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .lsi-logo {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .lsi-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      padding: 4vh;
+
+      .lsi-poster img {
+        width: 350px;
+        height: 350px;
+        margin-right: 30px;
       }
     }
 
-    .lsi-forgot-id {
-      font-size: 1.4rem;
+    .lsi-login-section {
+      gap: 30px;
 
-      @media (max-width: 768px) {
-        font-size: 1rem;
+      h2 {
+        font-size: 2.5rem;
       }
 
-      @media (max-width: 393px) {
-        font-size: 1rem;
-      }
-
-      a {
-        color: map-get($map: $color, $key: sub-01);
-        text-decoration: none;
-        cursor: pointer;
-        font-weight: bold;
-        transition: all 0.3s;
+      .lsi-login-btn {
+        @include loginBtn();
+        width: 320px;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
 
         &:hover {
-          text-decoration: 2px underline;
+          color: map-get($map: $color, $key: light);
+        }
+      }
+
+      .lsi-forgot-id {
+        font-size: 1.4rem;
+        text-align: center;
+        button {
+          font-size: 1.4rem;
+          border: none;
+          background: transparent;
+          color: map-get($map: $color, $key: main);
+          text-decoration: underline;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: map-get($map: $color, $key: light);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lsi-container {
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .lsi-logo {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .lsi-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3vh;
+
+      .lsi-poster img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .lsi-login-section {
+      width: 100%;
+      gap: 20px;
+      text-align: center;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .lsi-login-btn {
+        @include loginBtn();
+        width: 250px;
+        font-size: 1rem;
+
+        &:hover {
+          color: map-get($map: $color, $key: light);
+        }
+      }
+
+      .lsi-forgot-id {
+        font-size: 1rem;
+        button {
+          font-size: 1rem;
+          border: none;
+          background: transparent;
+          color: map-get($map: $color, $key: main);
+          text-decoration: underline;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: map-get($map: $color, $key: light);
+          }
         }
       }
     }
