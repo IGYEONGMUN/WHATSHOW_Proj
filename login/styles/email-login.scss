@@ -9,7 +9,6 @@ html {
 body {
   font-size: 1.6rem;
   background-color: map-get($map: $color, $key: dark);
-  // color: map-get($map: $color, $key: main);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,57 +17,211 @@ body {
   overflow: hidden;
 }
 
-.lsi-email-login-container {
-  width: 600px;
-  padding: 2rem;
-  text-align: center;
-}
-
-.lsi-email-login-header {
-  color: map-get($map: $color, $key: btn-bg);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 5vh;
-  h1 {
-    font-size: 3rem;
-    color: map-get($map: $color, $key: main);
+@media screen and (min-width: 1200px) and (max-width: 1920px) {
+  .lsi-email-login-container {
+    width: 600px;
+    padding: 2rem;
+    text-align: center;
   }
-  .lsi-password-reset-link {
-    font-size: 1rem;
-    transition: all 0.3s;
-    &:hover {
-      color: map-get($map: $color, $key: light);
+
+  .lsi-email-login-header {
+    color: map-get($map: $color, $key: btn-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+
+    h1 {
+      font-size: 3rem;
+      color: map-get($map: $color, $key: main);
+    }
+
+    .lsi-password-reset-link,
+    .lsi-signup-link,
+    .lsi-find-link {
+      font-size: 1.2rem;
+      transition: all 0.3s;
+      border: none;
+      background: transparent;
+      color: map-get($map: $color, $key: btn-bg);
+      cursor: pointer;
+      &:hover {
+        color: map-get($map: $color, $key: light);
+      }
+    }
+  }
+
+  .lsi-email-login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-direction: column;
+
+    input {
+      @include inputText();
+      width: 100%;
+
+      &:focus {
+        border: 1px solid map-get($map: $color, $key: main);
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 1.6rem;
+      }
+    }
+    // .lsi-error-message {
+    //   color: map-get($map: $color, $key: error);
+    //   font-size: 1rem;
+    // }
+
+    .lsi-email-login-btn {
+      width: 100%;
+      height: 48px;
+      border: 2px solid map-get($map: $color, $key: btn-bg);
+      border-radius: 5px;
+      background: transparent;
+      font-size: 1.4rem;
+      color: map-get($map: $color, $key: btn-bg);
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: map-get($map: $color, $key: light);
+        font-weight: bold;
+      }
     }
   }
 }
 
-.lsi-email-login-content form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-input {
-  @include inputText();
-  &:focus {
-    border: 1px solid map-get($map: $color, $key: main);
-    outline: none;
+@media screen and (max-width: 1180px) {
+  .lsi-email-login-container {
+    width: 500px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .lsi-email-login-header {
+    color: map-get($map: $color, $key: btn-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+
+    h1 {
+      font-size: 2.5rem;
+      color: map-get($map: $color, $key: main);
+    }
+
+    .lsi-password-reset-link,
+    .lsi-signup-link,
+    .lsi-find-link {
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: none;
+      background: transparent;
+      color: map-get($map: $color, $key: btn-bg);
+      cursor: pointer;
+      &:hover {
+        color: map-get($map: $color, $key: light);
+      }
+    }
+  }
+
+  .lsi-email-login-form {
+    input {
+      @include inputText();
+      width: 100%;
+
+      &:focus {
+        border: 1px solid map-get($map: $color, $key: main);
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 1.2rem;
+      }
+    }
+    .lsi-email-login-btn {
+      width: 100%;
+      height: 48px;
+      border: 2px solid map-get($map: $color, $key: btn-bg);
+      border-radius: 5px;
+      background: transparent;
+      font-size: 1.4rem;
+      color: map-get($map: $color, $key: btn-bg);
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: map-get($map: $color, $key: light);
+        font-weight: bold;
+      }
+    }
   }
 }
 
-.lsi-email-login-btn {
-  width: 100%;
-  height: 48px;
-  border: 2px solid map-get($map: $color, $key: btn-bg);
-  border-radius: 5px;
-  background: transparent;
-  font-size: 1.4rem;
-  color: map-get($map: $color, $key: btn-bg);
-  cursor: pointer;
-  transition: all 0.3s;
-  &:hover {
-    color: map-get($map: $color, $key: light);
-    font-weight: bold;
+@media screen and (max-width: 500px) {
+  .lsi-email-login-container {
+    width: 70%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .lsi-email-login-header {
+    color: map-get($map: $color, $key: btn-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+
+    h1 {
+      font-size: 2rem;
+      color: map-get($map: $color, $key: main);
+    }
+
+    .lsi-password-reset-link,
+    .lsi-signup-link,
+    .lsi-find-link {
+      font-size: 0.8rem;
+      transition: all 0.3s;
+      border: none;
+      background: transparent;
+      color: map-get($map: $color, $key: btn-bg);
+      cursor: pointer;
+      &:hover {
+        color: map-get($map: $color, $key: light);
+      }
+    }
+  }
+
+  .lsi-email-login-form {
+    input {
+      @include inputText();
+      width: 100%;
+
+      &:focus {
+        border: 1px solid map-get($map: $color, $key: main);
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 1rem;
+      }
+    }
+    .lsi-email-login-btn {
+      width: 100%;
+      height: 48px;
+      border: 2px solid map-get($map: $color, $key: btn-bg);
+      border-radius: 5px;
+      background: transparent;
+      font-size: 1.2rem;
+      color: map-get($map: $color, $key: btn-bg);
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: map-get($map: $color, $key: light);
+        font-weight: bold;
+      }
+    }
   }
 }
