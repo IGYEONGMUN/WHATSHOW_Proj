@@ -18,6 +18,8 @@ body {
   justify-content: center;
 }
 
+// 웹
+
 #web-container {
   width: 100%;
   height: 100%;
@@ -26,7 +28,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding-top: 100px;
+  position: relative;
   header {
     width: 100%;
     height: 100px;
@@ -128,6 +131,7 @@ body {
     justify-content: center;
     gap: 100px;
     padding-top: 100px;
+
     .smk-content-01 {
       display: flex;
       flex-direction: column;
@@ -253,7 +257,7 @@ body {
       }
       .smk-content-bottom {
         display: flex;
-        animation: slide-02 20s linear infinite;
+        animation: slide-02 15s linear infinite;
         gap: 20px;
         .smk-bottom-item {
           flex-shrink: 0;
@@ -289,6 +293,125 @@ body {
       }
     }
   }
+  footer {
+    width: 100%;
+    background: map-get($map: $color, $key: page-bg);
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    .footer-inner {
+      width: 1200px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          font-size: 2.4rem;
+          font-weight: bold;
+          color: map-get($map: $color, $key: main);
+        }
+        ul {
+          display: flex;
+          gap: 20px;
+          li {
+            color: map-get($map: $color, $key: btn-bg);
+          }
+        }
+      }
+      hr {
+        color: map-get($map: $color, $key: btn-bg);
+      }
+      .footer-middle {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          color: map-get($map: $color, $key: btn-bg);
+        }
+      }
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          color: map-get($map: $color, $key: btn-bg);
+        }
+        .footer-icon {
+          display: flex;
+          gap: 20px;
+          font-size: 1.8rem;
+          color: map-get($map: $color, $key: btn-bg);
+        }
+      }
+    }
+  }
+  .top-button {
+    .lgm_top_button {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(20, 20, 20);
+      border: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+      cursor: pointer;
+      transition-duration: 0.3s;
+      overflow: hidden;
+      z-index: 999;
+      right: 50px;
+      bottom: 50px;
+    }
+
+    .svgIcon {
+      width: 12px;
+      transition-duration: 0.3s;
+    }
+
+    .svgIcon path {
+      fill: white;
+    }
+
+    .lgm_top_button:hover {
+      width: 140px;
+      border-radius: 50px;
+      transition-duration: 0.3s;
+      background-color: rgb(181, 160, 255);
+      align-items: center;
+    }
+
+    .lgm_top_button:hover .svgIcon {
+      /* width: 20px; */
+      transition-duration: 0.3s;
+      transform: translateY(-200%);
+    }
+
+    .lgm_top_button::before {
+      position: absolute;
+      bottom: -20px;
+      content: "Back to Top";
+      color: white;
+      /* transition-duration: .3s; */
+      font-size: 0px;
+    }
+
+    .lgm_top_button:hover::before {
+      font-size: 13px;
+      opacity: 1;
+      bottom: unset;
+      /* transform: translateY(-30px); */
+      transition-duration: 0.3s;
+    }
+  }
 }
 
 #tablet-container {
@@ -298,6 +421,8 @@ body {
 #mobile-container {
   display: none;
 }
+
+// 태블릿
 
 @media screen and (min-width: 960px) and (max-width: 1199px) {
   #web-container {
@@ -311,7 +436,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 100px 0;
+    padding-top: 100px;
+    position: relative;
     header {
       width: 100%;
       height: 100px;
@@ -508,26 +634,21 @@ body {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        overflow: hidden;
         .smk-content-top {
           display: flex;
           gap: 20px;
-          .smk-top-item-01 {
+          .smk-top-item {
             @include size-172-172;
-            border: 1px solid #f00;
-          }
-          .smk-top-item-02 {
-            @include size-364-172;
             border: 1px solid #f00;
           }
         }
         .smk-content-middle {
           display: flex;
           gap: 20px;
-          .smk-middle-item-01 {
-            @include size-172-172;
-            border: 1px solid #f00;
-          }
-          .smk-middle-item-02 {
+          animation: slide-01 20s linear infinite;
+          .smk-middle-item {
+            flex-shrink: 0;
             @include size-364-172;
             border: 1px solid #f00;
           }
@@ -535,11 +656,9 @@ body {
         .smk-content-bottom {
           display: flex;
           gap: 20px;
-          .smk-bottom-item-01 {
-            @include size-172-172;
-            border: 1px solid #f00;
-          }
-          .smk-bottom-item-02 {
+          animation: slide-02 20s linear infinite;
+          .smk-bottom-item {
+            flex-shrink: 0;
             @include size-364-172;
             border: 1px solid #f00;
           }
@@ -579,11 +698,113 @@ body {
         }
       }
     }
+    footer {
+      width: 100%;
+      background: map-get($map: $color, $key: page-bg);
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+      .footer-inner {
+        width: 940px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer-left {
+          p {
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: map-get($map: $color, $key: main);
+          }
+        }
+        .footer-middle {
+          p {
+            font-size: 1.4rem;
+            color: map-get($map: $color, $key: btn-bg);
+          }
+        }
+        .footer-right {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .footer-icon {
+            display: flex;
+            gap: 20px;
+            font-size: 1.4rem;
+            color: map-get($map: $color, $key: btn-bg);
+          }
+        }
+      }
+    }
+    .top-button {
+      .lgm_top_button {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(20, 20, 20);
+        border: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+        cursor: pointer;
+        transition-duration: 0.3s;
+        overflow: hidden;
+        z-index: 999;
+        right: 50px;
+        bottom: 50px;
+      }
+
+      .svgIcon {
+        width: 12px;
+        transition-duration: 0.3s;
+      }
+
+      .svgIcon path {
+        fill: white;
+      }
+
+      .lgm_top_button:hover {
+        width: 140px;
+        border-radius: 50px;
+        transition-duration: 0.3s;
+        background-color: rgb(181, 160, 255);
+        align-items: center;
+      }
+
+      .lgm_top_button:hover .svgIcon {
+        /* width: 20px; */
+        transition-duration: 0.3s;
+        transform: translateY(-200%);
+      }
+
+      .lgm_top_button::before {
+        position: absolute;
+        bottom: -20px;
+        content: "Back to Top";
+        color: white;
+        /* transition-duration: .3s; */
+        font-size: 0px;
+      }
+
+      .lgm_top_button:hover::before {
+        font-size: 13px;
+        opacity: 1;
+        bottom: unset;
+        /* transform: translateY(-30px); */
+        transition-duration: 0.3s;
+      }
+    }
   }
   #mobile-container {
     display: none;
   }
 }
+
+// 모바일
 
 @media screen and (max-width: 959px) {
   #web-container {
@@ -600,7 +821,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding-top: 50px;
     header {
       width: 100%;
       height: 50px;
@@ -766,8 +987,108 @@ body {
         }
       }
     }
+    footer {
+      width: 100%;
+      background: map-get($map: $color, $key: page-bg);
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      .footer-inner {
+        width: 326px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        .footer-top {
+          p {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: map-get($map: $color, $key: main);
+          }
+        }
+        .footer-middle {
+          p {
+            font-size: 1.2rem;
+            color: map-get($map: $color, $key: btn-bg);
+          }
+        }
+        .footer-bottom {
+          .footer-icon {
+            display: flex;
+            gap: 10px;
+            font-size: 1.2rem;
+            color: map-get($map: $color, $key: btn-bg);
+          }
+        }
+      }
+    }
+    .top-button {
+      .lgm_top_button {
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgb(20, 20, 20);
+        border: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+        cursor: pointer;
+        transition-duration: 0.3s;
+        overflow: hidden;
+        z-index: 999;
+        right: 50px;
+        bottom: 50px;
+        transform: translateY(-65px);
+      }
+
+      .svgIcon {
+        width: 10px;
+        transition-duration: 0.3s;
+      }
+
+      .svgIcon path {
+        fill: white;
+      }
+
+      .lgm_top_button:hover {
+        width: 90px;
+        border-radius: 50px;
+        transition-duration: 0.3s;
+        background-color: rgb(181, 160, 255);
+        align-items: center;
+      }
+
+      .lgm_top_button:hover .svgIcon {
+        /* width: 20px; */
+        transition-duration: 0.3s;
+        transform: translateY(-200%);
+      }
+
+      .lgm_top_button::before {
+        position: absolute;
+        bottom: -20px;
+        content: "Back to Top";
+        color: white;
+        /* transition-duration: .3s; */
+        font-size: 0px;
+      }
+
+      .lgm_top_button:hover::before {
+        font-size: 10px;
+        opacity: 1;
+        bottom: unset;
+        /* transform: translateY(-30px); */
+        transition-duration: 0.3s;
+      }
+    }
   }
 }
+
+// 슬라이드
 
 @keyframes slide-01 {
   0% {
@@ -795,3 +1116,5 @@ body {
     transform: translateY(-99%);
   }
 }
+
+// 탑 버튼

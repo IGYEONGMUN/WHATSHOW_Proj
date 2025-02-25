@@ -38,6 +38,8 @@ main section {
   width: 1200px;
   height: 100%;
   border: 1px solid #f00;
+  /*===== slick slider scss start =====*/
+  /*===== slick slider scss end =====*/
 }
 main section #cdy-contents01 {
   margin-top: 150px;
@@ -52,6 +54,35 @@ main section #cdy-contents01 .img {
   width: 590px;
   height: 381px;
   border-radius: 5px;
+  position: relative;
+}
+main section #cdy-contents01 .img .maintitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+main section #cdy-contents01 .img .maintitle h1 {
+  font-size: 4.2rem;
+}
+main section #cdy-contents01 .img .maintitle .playbtn {
+  display: flex;
+  font-size: 2rem;
+  gap: 20px;
+  align-items: center;
+}
+main section #cdy-contents01 .img .maintitle .playbtn p {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000000;
+  opacity: 0.7;
+}
+main section #cdy-contents01 .img .maintitle .playbtn .fa-arrow-right-to-bracket {
+  transform: rotate(90deg);
 }
 main section #cdy-contents01 .cdy-container {
   display: flex;
@@ -131,7 +162,7 @@ main section #cdy-contents02 {
   overflow: hidden;
 }
 main section #cdy-contents02 .cdy-epi {
-  display: flex;
+  display: flex !important;
   margin-top: 15px;
   gap: 20px;
 }
@@ -141,6 +172,38 @@ main section #cdy-contents02 .cdy-epi .epi .epi-img {
   width: 305px;
   height: 180px;
   border-radius: 5px;
+}
+main section .slick-track {
+  display: flex !important;
+  gap: 20px;
+}
+main section .slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: auto !important;
+}
+main section .slick-list {
+  overflow: hidden;
+}
+main section .slick-prev,
+main section .slick-next {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-45%);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+main section .slick-prev {
+  left: -40px;
+}
+main section .slick-next {
+  right: -40px;
 }
 main section #cdy-contents03 {
   width: 100%;
@@ -400,6 +463,20 @@ main section #cdy-contents04 .cdy-cons .sub {
     height: 250px;
     border-radius: 5px;
   }
+  main section #cdy-contents01 .img .maintitle {
+    bottom: 20px;
+    left: 20px;
+  }
+  main section #cdy-contents01 .img .maintitle h1 {
+    font-size: 2.4rem;
+  }
+  main section #cdy-contents01 .img .maintitle .playbtn {
+    font-size: 1.6rem;
+    gap: 10px;
+  }
+  main section #cdy-contents01 .img .maintitle .playbtn p {
+    padding: 5px;
+  }
   main section #cdy-contents01 .cdy-container {
     width: 100%;
     margin: 0 auto;
@@ -443,8 +520,8 @@ main section #cdy-contents04 .cdy-cons .sub {
   }
   main section #cdy-contents03 h3 {
     font-size: 1.6rem;
-    line-height: 20px;
-    border: 1px solid #f00;
+    display: flex;
+    align-items: center;
   }
   main section #cdy-contents03 .cdy-location {
     flex-direction: column;
@@ -495,4 +572,4 @@ main section #cdy-contents04 .cdy-cons .sub {
   main section #cdy-contents04 {
     display: none;
   }
-}/*# sourceMappingURL=detail.css.map */
+}
