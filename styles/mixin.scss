@@ -102,6 +102,12 @@
   border-radius: 5px;
 }
 
+@mixin size-290-180 {
+  width: 290px;
+  height: 180px;
+  border-radius: 5px;
+}
+
 @mixin size-243-160 {
   width: 243px;
   height: 160px;
