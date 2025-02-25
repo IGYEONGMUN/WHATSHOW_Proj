@@ -139,9 +139,8 @@ main {
       width: 100%;
       margin-top: 50px;
       overflow: hidden;
-      // 강제 적용시키기 위해 !important 부여
       .cdy-epi {
-        display: flex !important;
+        display: flex;
         margin-top: 15px;
         // margin-right: -60px;
         gap: 20px;
@@ -149,28 +148,24 @@ main {
           .epi-img {
             border: 1px solid #f00;
             margin-bottom: 5px;
-            @include size-305-180;
+            @include size-290-180;
           }
         }
       }
     }
-    /*===== slick slider scss start =====*/
     .slick-track {
       display: flex !important;
-      gap: 20px;
     }
-
     .slick-slide {
       display: flex !important;
-      justify-content: center;
-      align-items: center;
-      height: auto !important;
+      gap: 20px;
+      // justify-content: center;
+      // align-items: center;
+      // height: auto !important;
     }
-
     .slick-list {
       overflow: hidden;
     }
-
     // 좌우 버튼 css
     .slick-prev,
     .slick-next {
@@ -188,11 +183,21 @@ main {
 
     .slick-prev {
       left: -40px;
+      &::before {
+        content: "\f053";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
     }
     .slick-next {
-      right: -40px;
+      right: -35px;
+      &::before {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
     }
-    /*===== slick slider scss end =====*/
+
     #cdy-contents03 {
       width: 100%;
       margin-top: 40px;
@@ -346,14 +351,22 @@ main {
         }
       }
       #cdy-contents02 {
-        display: flex;
+        display: flex !important;
         justify-content: center;
         align-items: center;
         gap: 20px;
-        h3 {
-          padding: 50px 50px;
+        .cdy-epi-title {
+          width: 220px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h3 {
+            margin-bottom: 30px;
+          }
         }
+
         .cdy-epi {
+          display: grid;
           margin-top: 15px;
           gap: 20px;
           .epi {
@@ -362,6 +375,26 @@ main {
             }
           }
         }
+      }
+      // 좌우 버튼 css
+      .slick-prev,
+      .slick-next {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-45%);
+        color: map-get($map: $color, $key: light);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1;
+      }
+      .slick-prev {
+        left: -30px;
+      }
+      .slick-next {
+        right: 0px;
       }
       #cdy-contents03 {
         flex-direction: column;
@@ -504,6 +537,25 @@ main {
             }
           }
         }
+      }
+      .slick-prev,
+      .slick-next {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-45%);
+        color: map-get($map: $color, $key: light);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1;
+      }
+      .slick-prev {
+        left: -10px;
+      }
+      .slick-next {
+        right: -10px;
       }
       #cdy-contents03 {
         flex-direction: column;

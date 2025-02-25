@@ -4,6 +4,25 @@ const hoversScale = document.querySelectorAll(".hover-scale");
 const hoversStop = document.querySelectorAll(".hover-stop");
 const backToTops = document.querySelectorAll(".lgm_top_button");
 
+const topbtn = document.querySelector(".lgm_top_button");
+const triggerBtn = document.querySelector(".lgm_trigger");
+
+triggerBtn.addEventListener("click", () => {
+  triggerBtn.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    topbtn.style.opacity = "1";
+  } else {
+    topbtn.style.opacity = "0";
+  }
+});
+
+topbtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 hoversUp.forEach((hoverUp) => {
   hoverUp.addEventListener("mouseover", () => {
     hoverUp.style.transition = "all 0.3s";
