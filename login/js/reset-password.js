@@ -1,5 +1,10 @@
 const form = document.querySelector(".lsi-reset-password-form");
 const emailInput = form.querySelector("input[type='email']");
+const backBtn = document.querySelector(".lsi-back-button");
+
+backBtn.addEventListener("click", () => {
+  window.location.href = "./email-login.html";
+});
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

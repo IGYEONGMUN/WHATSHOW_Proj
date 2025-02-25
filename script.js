@@ -2,6 +2,7 @@ const hoversUp = document.querySelectorAll(".hover-up");
 const hoversDown = document.querySelectorAll(".hover-down");
 const hoversScale = document.querySelectorAll(".hover-scale");
 const hoversStop = document.querySelectorAll(".hover-stop");
+const backToTops = document.querySelectorAll(".lgm_top_button");
 
 const topbtn = document.querySelector(".lgm_top_button");
 const triggerBtn = document.querySelector(".lgm_trigger");
@@ -71,8 +72,19 @@ hoversStop.forEach((hoverStop) => {
   });
 });
 
-const trigger = document.querySelector(".trigger");
-trigger.addEventListener("click", function () {
-  this.classList.toggle("active");
-  document.querySelector(".gnb").classList.toggle("active");
+backToTops.forEach((backToTop) => {
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      backToTop.style.opacity = "1";
+    } else {
+      backToTop.style.opacity = "0";
+    }
+  });
 });
