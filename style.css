@@ -391,8 +391,8 @@ body {
   font-size: 1.8rem;
   color: #c1c7cd;
 }
-#web-container .top-button .lgm_top_button {
-  position: fixed;
+
+.lgm_top_button {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -406,30 +406,36 @@ body {
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
+  position: fixed;
   z-index: 999;
   right: 50px;
   bottom: 25px;
 }
-#web-container .top-button .svgIcon {
+
+.svgIcon {
   width: 12px;
   transition-duration: 0.3s;
 }
-#web-container .top-button .svgIcon path {
+
+.svgIcon path {
   fill: white;
 }
-#web-container .top-button .lgm_top_button:hover {
+
+.lgm_top_button:hover {
   width: 140px;
   border-radius: 50px;
   transition-duration: 0.3s;
   background-color: rgb(181, 160, 255);
   align-items: center;
 }
-#web-container .top-button .lgm_top_button:hover .svgIcon {
+
+.lgm_top_button:hover .svgIcon {
   /* width: 20px; */
   transition-duration: 0.3s;
   transform: translateY(-200%);
 }
-#web-container .top-button .lgm_top_button::before {
+
+.lgm_top_button::before {
   position: absolute;
   bottom: -20px;
   content: "Back to Top";
@@ -437,7 +443,8 @@ body {
   /* transition-duration: .3s; */
   font-size: 0px;
 }
-#web-container .top-button .lgm_top_button:hover::before {
+
+.lgm_top_button:hover::before {
   font-size: 13px;
   opacity: 1;
   bottom: unset;
@@ -1055,6 +1062,90 @@ body {
     height: 77px;
     border-radius: 5px;
     border: 1px solid #f00;
+  }
+  #mobile-container footer {
+    width: 100%;
+    background: #333333;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  #mobile-container footer .footer-inner {
+    width: 326px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  #mobile-container footer .footer-inner .footer-top p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00fffb;
+  }
+  #mobile-container footer .footer-inner .footer-middle p {
+    font-size: 1.2rem;
+    color: #c1c7cd;
+  }
+  #mobile-container footer .footer-inner .footer-bottom .footer-icon {
+    display: flex;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #c1c7cd;
+  }
+  #mobile-container .top-button .lgm_top_button {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    z-index: 999;
+    right: 50px;
+    bottom: 50px;
+    transform: translateY(-65px);
+  }
+  #mobile-container .top-button .svgIcon {
+    width: 10px;
+    transition-duration: 0.3s;
+  }
+  #mobile-container .top-button .svgIcon path {
+    fill: white;
+  }
+  #mobile-container .top-button .lgm_top_button:hover {
+    width: 90px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+  }
+  #mobile-container .top-button .lgm_top_button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  #mobile-container .top-button .lgm_top_button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  #mobile-container .top-button .lgm_top_button:hover::before {
+    font-size: 10px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
   }
 }
 @keyframes slide-01 {
