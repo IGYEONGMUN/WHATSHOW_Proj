@@ -14,6 +14,21 @@ $(document).ready(function () {
     prevArrow: '<button class="slick-prev"></button>',
     nextArrow: '<button class="slick-next"></button>',
     adaptiveHeight: true, // 기존 높이 유지
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   });
 });
 /* ==================== slider 기능 구현 끝 ==================== */

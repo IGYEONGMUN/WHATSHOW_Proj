@@ -38,8 +38,6 @@ main section {
   width: 1200px;
   height: 100%;
   border: 1px solid #f00;
-  /*===== slick slider scss start =====*/
-  /*===== slick slider scss end =====*/
 }
 main section #cdy-contents01 {
   margin-top: 150px;
@@ -162,26 +160,23 @@ main section #cdy-contents02 {
   overflow: hidden;
 }
 main section #cdy-contents02 .cdy-epi {
-  display: flex !important;
+  display: flex;
   margin-top: 15px;
   gap: 20px;
 }
 main section #cdy-contents02 .cdy-epi .epi .epi-img {
   border: 1px solid #f00;
   margin-bottom: 5px;
-  width: 305px;
+  width: 290px;
   height: 180px;
   border-radius: 5px;
 }
 main section .slick-track {
   display: flex !important;
-  gap: 20px;
 }
 main section .slick-slide {
   display: flex !important;
-  justify-content: center;
-  align-items: center;
-  height: auto !important;
+  gap: 20px;
 }
 main section .slick-list {
   overflow: hidden;
@@ -202,8 +197,18 @@ main section .slick-next {
 main section .slick-prev {
   left: -40px;
 }
+main section .slick-prev::before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
 main section .slick-next {
-  right: -40px;
+  right: -35px;
+}
+main section .slick-next::before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 main section #cdy-contents03 {
   width: 100%;
@@ -367,15 +372,22 @@ main section #cdy-contents04 .cdy-cons .sub {
     display: none;
   }
   main section #cdy-contents02 {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     gap: 20px;
   }
-  main section #cdy-contents02 h3 {
-    padding: 50px 50px;
+  main section #cdy-contents02 .cdy-epi-title {
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section #cdy-contents02 .cdy-epi-title h3 {
+    margin-bottom: 30px;
   }
   main section #cdy-contents02 .cdy-epi {
+    display: grid;
     margin-top: 15px;
     gap: 20px;
   }
@@ -383,6 +395,25 @@ main section #cdy-contents04 .cdy-cons .sub {
     width: 172px;
     height: 100px;
     border-radius: 5px;
+  }
+  main section .slick-prev,
+  main section .slick-next {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-45%);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  main section .slick-prev {
+    left: -30px;
+  }
+  main section .slick-next {
+    right: 0px;
   }
   main section #cdy-contents03 {
     flex-direction: column;
@@ -515,6 +546,25 @@ main section #cdy-contents04 .cdy-cons .sub {
     height: 77px;
     border-radius: 5px;
   }
+  main section .slick-prev,
+  main section .slick-next {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-45%);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  main section .slick-prev {
+    left: -10px;
+  }
+  main section .slick-next {
+    right: -10px;
+  }
   main section #cdy-contents03 {
     flex-direction: column;
   }
@@ -572,4 +622,4 @@ main section #cdy-contents04 .cdy-cons .sub {
   main section #cdy-contents04 {
     display: none;
   }
-}/*# sourceMappingURL=detail.css.map */
+}
