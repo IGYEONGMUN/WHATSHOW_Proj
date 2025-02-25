@@ -246,7 +246,7 @@ body {
         animation: slide-01 20s linear infinite;
         gap: 20px;
         .smk-middle-item {
-          flex: 0 0 387px;
+          flex-shrink: 0;
           @include size-387-183;
           border: 1px solid #f00;
         }
@@ -256,7 +256,7 @@ body {
         animation: slide-02 20s linear infinite;
         gap: 20px;
         .smk-bottom-item {
-          flex: 0 0 387px;
+          flex-shrink: 0;
           @include size-387-183;
           border: 1px solid #f00;
         }
@@ -422,8 +422,10 @@ body {
           flex-direction: column;
           gap: 20px;
           .content-left-top {
-            @include size-556-364;
-            border: 1px solid #f00;
+            .left-top-item {
+              @include size-556-364;
+              border: 1px solid #f00;
+            }
           }
           .content-left-bottom {
             display: flex;
@@ -439,8 +441,10 @@ body {
           flex-direction: column;
           gap: 20px;
           .content-right-top {
-            @include size-364-364;
-            border: 1px solid #f00;
+            .right-top-item {
+              @include size-364-364;
+              border: 1px solid #f00;
+            }
           }
           .content-right-bottom {
             display: flex;
@@ -468,8 +472,10 @@ body {
             }
           }
           .content-left-bottom {
-            @include size-364-172;
-            border: 1px solid #f00;
+            .left-bottom-item {
+              @include size-364-172;
+              border: 1px solid #f00;
+            }
           }
         }
         .smk-content-middle {
@@ -485,13 +491,17 @@ body {
             }
           }
           .content-middle-bottom {
-            @include size-364-172;
-            border: 1px solid #f00;
+            .middle-bottom-item {
+              @include size-364-172;
+              border: 1px solid #f00;
+            }
           }
         }
         .smk-content-right {
-          @include size-172-364;
-          border: 1px solid #f00;
+          .content-right-item {
+            @include size-172-364;
+            border: 1px solid #f00;
+          }
         }
       }
       .smk-content-03 {
@@ -536,35 +546,36 @@ body {
         }
       }
       .smk-content-04 {
+        height: 556px;
         display: flex;
         gap: 20px;
-      }
-      .smk-content-left {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        .content-left-item-01 {
-          @include size-556-172;
-          border: 1px solid #f00;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          h2 {
-            color: map-get($map: $color, $key: light);
+        overflow: hidden;
+        .smk-content-left {
+          .content-left-item {
+            @include size-556-556;
+            border: 1px solid #f00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            h2 {
+              position: absolute;
+              top: 15px;
+              left: 15px;
+              color: map-get($map: $color, $key: light);
+            }
           }
         }
-        .content-left-item-02 {
-          @include size-556-556;
-          border: 1px solid #f00;
-        }
-      }
-      .smk-content-right {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        .content-right-item {
-          @include size-364-172;
-          border: 1px solid #f00;
+        .smk-content-right {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          animation: slide-03 20s linear infinite;
+          .content-right-item {
+            flex-shrink: 0;
+            @include size-364-172;
+            border: 1px solid #f00;
+          }
         }
       }
     }
@@ -639,8 +650,10 @@ body {
           flex-direction: column;
           gap: 5px;
           .content-left-top {
-            @include size-243-160;
-            border: 1px solid #f00;
+            .left-top-item {
+              @include size-243-160;
+              border: 1px solid #f00;
+            }
           }
           .content-left-bottom {
             display: flex;
@@ -693,6 +706,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        overflow: hidden;
         .smk-content-top {
           display: flex;
           gap: 5px;
@@ -701,22 +715,12 @@ body {
             border: 1px solid #f00;
           }
         }
-        .smk-content-middle-01 {
+        .smk-content-middle {
           display: flex;
           gap: 5px;
-          .content-middle-item-01 {
-            @include size-77-77;
-            border: 1px solid #f00;
-          }
-          .content-middle-item-02 {
-            @include size-160-77;
-            border: 1px solid #f00;
-          }
-        }
-        .smk-content-middle-02 {
-          display: flex;
-          gap: 5px;
-          .content-middle-item-02 {
+          animation: slide-01 20s linear infinite;
+          .content-middle-item {
+            flex: 0 0 160px;
             @include size-160-77;
             border: 1px solid #f00;
           }
@@ -724,7 +728,9 @@ body {
         .smk-content-bottom {
           display: flex;
           gap: 5px;
-          .content--bottom-item {
+          animation: slide-02 20s linear infinite;
+          .content-bottom-item {
+            flex: 0 0 160px;
             @include size-160-77;
             border: 1px solid #f00;
           }
@@ -778,5 +784,14 @@ body {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes slide-03 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-99%);
   }
 }
