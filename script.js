@@ -6,9 +6,11 @@ const backToTops = document.querySelectorAll(".lgm_top_button");
 
 const topbtn = document.querySelector(".lgm_top_button");
 const triggerBtn = document.querySelector(".lgm_trigger");
+const hamburgerMenu = document.querySelector(".lgm_active_trigger");
 
 triggerBtn.addEventListener("click", () => {
   triggerBtn.classList.toggle("active");
+  hamburgerMenu.classList.toggle("active");
 });
 
 window.addEventListener("scroll", () => {
