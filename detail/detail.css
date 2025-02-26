@@ -28,11 +28,112 @@ main {
   background: #000000;
   color: #ffffff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 main h3 {
   font-size: 2.4rem;
+}
+main header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333;
+  z-index: 2;
+}
+main header .header-inner {
+  width: 1200px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+main header .header-inner .inner-left {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+main header .header-inner .inner-left h2 {
+  font-size: 3.2rem;
+  color: #00fffb;
+}
+main header .header-inner .inner-left .category {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+main header .header-inner .inner-left .category h4 {
+  color: #c1c7cd;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main header .header-inner .inner-left .category h4:hover {
+  color: #00fffb;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+main header .header-inner .inner-right {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+main header .header-inner .inner-right .search-bar {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c1c7cd;
+  padding: 0 10px;
+}
+main header .header-inner .inner-right .search-bar input[type=text] {
+  width: 200px;
+  height: 40px;
+  border: none;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: #ffffff;
+}
+main header .header-inner .inner-right .search-bar input[type=text]::-moz-placeholder {
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+}
+main header .header-inner .inner-right .search-bar input[type=text]::placeholder {
+  transition: all 0.5s;
+  opacity: 1;
+}
+main header .header-inner .inner-right .search-bar input[type=text]:focus {
+  outline: none;
+}
+main header .header-inner .inner-right .search-bar input[type=text]:focus::-moz-placeholder {
+  opacity: 0;
+}
+main header .header-inner .inner-right .search-bar input[type=text]:focus::placeholder {
+  opacity: 0;
+}
+main header .header-inner .inner-right .search-bar .fa-magnifying-glass {
+  font-size: 2.4rem;
+  color: #c1c7cd;
+}
+main header .header-inner .inner-right .menu-icon {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+main header .header-inner .inner-right .menu-icon i {
+  font-size: 2.4rem;
+  color: #c1c7cd;
 }
 main section {
   width: 1200px;
@@ -341,6 +442,62 @@ main section #cdy-contents04 .cdy-cons .sub {
   width: 183px;
   height: 250px;
   border-radius: 5px;
+}
+main footer {
+  width: 100%;
+  background: #333333;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+main footer .footer-inner {
+  width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+main footer .footer-inner .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main footer .footer-inner .footer-top p {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00fffb;
+}
+main footer .footer-inner .footer-top ul {
+  display: flex;
+  gap: 20px;
+}
+main footer .footer-inner .footer-top ul li {
+  color: #c1c7cd;
+}
+main footer .footer-inner hr {
+  color: #c1c7cd;
+}
+main footer .footer-inner .footer-middle ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #c1c7cd;
+}
+main footer .footer-inner .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main footer .footer-inner .footer-bottom p {
+  color: #c1c7cd;
+}
+main footer .footer-inner .footer-bottom .footer-icon {
+  display: flex;
+  gap: 20px;
+  font-size: 1.8rem;
+  color: #c1c7cd;
 }
 
 @media screen and (min-width: 960px) and (max-width: 1200px) {
