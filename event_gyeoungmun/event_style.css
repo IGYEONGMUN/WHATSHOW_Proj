@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #000000;
 }
 
 #lgm_container {
@@ -42,8 +43,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #ddd;
+  color: #ffffff;
   border-radius: 10px;
+  background: #000000;
 }
 .lgm_top_section .lgm_top_header p:nth-of-type(1) {
   text-align: center;
@@ -69,9 +71,9 @@ body {
 }
 .lgm_top_section .lgm_top_contents {
   margin-top: 20px;
-  background: #ddd;
   padding: 20px;
   border-radius: 10px;
+  background: #000000;
 }
 .lgm_top_section .lgm_top_contents .lgm_top_contents_inner .content {
   margin: 20px 0;
@@ -106,7 +108,8 @@ body {
   align-items: center;
 }
 .lgm_main_section .lgm_main_content {
-  background: #ddd;
+  color: #ffffff;
+  background: #000000;
   border-radius: 10px;
   padding: 20px;
   margin: 40px 0;
@@ -118,7 +121,8 @@ body {
   height: 610px;
   margin-top: 15px;
   border-radius: 10px;
-  background: #fff;
+  background: #000000;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +144,8 @@ body {
   width: 750px;
   height: 500px;
   margin-left: 40px;
-  background: #626268;
+  color: #ffffff;
+  background: #000000;
   border-radius: 10px;
   display: flex;
   justify-content: center;
