@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@ a {
   color: inherit;
 }
 
+/*==== header & footer ====*/
 /*==== lsi ====*/
 html {
   font-size: 62.5%;
@@ -246,4 +248,4 @@ body {
     color: #ffffff;
     font-weight: bold;
   }
-}/*# sourceMappingURL=email-login.css.map */
+}
