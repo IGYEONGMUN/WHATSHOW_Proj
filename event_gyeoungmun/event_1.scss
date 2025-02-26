@@ -11,20 +11,19 @@ body {
 }
 
 #lgm_container {
-  border: 1px solid #f00;
-  width: 80%;
-  height: 200vh;
+  width: 1200px;
+  height: 300vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 80px;
   font-family: map-get($map: $font, $key: dohyeon);
   font-weight: 10px;
 }
 
 .lgm_top_header {
   width: 100%;
-  height: 600px;
+  height: 700px;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
@@ -37,47 +36,114 @@ body {
     letter-spacing: 28px;
     color: pink;
   }
-  h4 {
-    font-family: map-get($map: $font, $key: noto);
-    letter-spacing: 5px;
-  }
 
-  .h1_1 {
+  .p_1 {
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 2s;
   }
-  .h1_2 {
+  .p_2 {
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 2s;
+    letter-spacing: 70px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
   }
   .h1_3 {
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 1.5s;
   }
+  .p4 {
+    font-family: map-get($map: $font, $key: noto);
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    line-height: 50px;
+    opacity: 0;
+    margin-top: 150px;
+  }
+
   #check1 {
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 1s;
   }
   #check2 {
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 1s;
   }
   #check3 {
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 1s;
   }
   #check4 {
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 1s;
   }
-  .h4 {
+  .p4 {
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 2s;
   }
 }
 
-.lgm_main_section {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #f00;
+.lgm_main_outer_section1 {
+  width: 100%;
+  height: 900px;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .lgm_main_section {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &.rotate {
+      transition: all 3s;
+
+      animation: spin 3s linear forwards;
+    }
+  }
+  .desc {
+    width: 700px;
+    height: 450px;
+    margin-top: 90px;
+    opacity: 0;
+    transition: opacity 4s;
+    &.scroll {
+      opacity: 1;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 60px;
+    }
+  }
+  .main_input {
+    display: flex;
+    transition: opacity 4s;
+    opacity: 0;
+    margin-top: 10px;
+    gap: 20px;
+    font-size: 2rem;
+    input {
+      padding: 10px;
+      outline: none;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(-500px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(360deg);
+  }
 }
