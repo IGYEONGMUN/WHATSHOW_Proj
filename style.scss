@@ -854,15 +854,15 @@ body {
           }
         }
       }
+
       .lgm_trigger {
         width: 30px;
         height: 20px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 0px;
-        z-index: 10;
-        cursor: pointer;
+        right: 20px;
+        z-index: -1;
         span {
           transition: all 0.3s;
           position: absolute;
@@ -870,6 +870,8 @@ body {
           height: 1px;
           background: #ffffff;
           opacity: 1;
+          cursor: pointer;
+
           &:nth-child(1) {
             top: 0;
             height: 0.5px;
@@ -884,6 +886,18 @@ body {
             height: 0.5px;
           }
         }
+        .lgm_trigger_i {
+          display: flex;
+          cursor: pointer;
+          i {
+            opacity: 1;
+            visibility: hidden;
+            font-size: 3rem;
+            transform: translate(-130px, 80px);
+            margin: 0 13px;
+          }
+        }
+
         &.active {
           span {
             &:nth-child(1) {
@@ -898,6 +912,34 @@ body {
               transform: rotate(-45deg);
             }
           }
+
+          .lgm_trigger_i {
+            i {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+          .lgm_trigger_bottom {
+            h4 {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .lgm_trigger_bottom {
+          flex-direction: column;
+          width: 150px;
+          height: 500px;
+          transform: translate(-140px, 80px);
+          margin-top: 60px;
+          h4 {
+            opacity: 0;
+            visibility: hidden;
+
+            cursor: pointer;
+            margin-top: 30px;
+            text-align: center;
+          }
         }
       }
     }
@@ -909,12 +951,11 @@ body {
       justify-content: center;
       gap: 50px;
       padding-top: 50px;
-      border: 1px solid rgb(15, 255, 67);
       position: relative;
       .lgm_active_trigger {
         position: absolute;
         width: 230px;
-        height: 100%;
+        height: 1725px;
         right: -100px;
         margin-top: -50px;
         transition: all 0.3s;
