@@ -16,7 +16,7 @@ const nowPlaying = async () => {
 };
 console.log(nowPlaying());
 
-getMovies();
+// getMovies();
 
 // Hover Event
 const hoversUp = document.querySelectorAll(".hover-up");
