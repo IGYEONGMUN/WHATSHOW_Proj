@@ -97,7 +97,7 @@ main .web-header .header-inner .inner-right .search-bar {
   border-bottom: 1px solid #c1c7cd;
   padding: 0 10px;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text] {
+main .web-header .header-inner .inner-right .search-bar input[type="text"] {
   width: 200px;
   height: 40px;
   border: none;
@@ -105,22 +105,47 @@ main .web-header .header-inner .inner-right .search-bar input[type=text] {
   background-color: transparent;
   color: #ffffff;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]::-moz-placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]::-moz-placeholder {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   opacity: 1;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]::placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]::placeholder {
   transition: all 0.5s;
   opacity: 1;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]:focus {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]:focus {
   outline: none;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]:focus::-moz-placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]:focus::-moz-placeholder {
   opacity: 0;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]:focus::placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]:focus::placeholder {
   opacity: 0;
 }
 main .web-header .header-inner .inner-right .search-bar .fa-magnifying-glass {
@@ -192,7 +217,13 @@ main section #cdy-contents01 .img .maintitle .playbtn .fa-heart {
   cursor: pointer;
   font-size: 2.2rem;
 }
-main section #cdy-contents01 .img .maintitle .playbtn .fa-arrow-right-to-bracket {
+main
+  section
+  #cdy-contents01
+  .img
+  .maintitle
+  .playbtn
+  .fa-arrow-right-to-bracket {
   transform: rotate(90deg);
   cursor: pointer;
   font-size: 2.2rem;
@@ -591,7 +622,12 @@ main .mobile-footer {
     border-bottom: 1px solid #c1c7cd;
     padding: 0 10px;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text] {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"] {
     width: 250px;
     height: 40px;
     border: none;
@@ -599,25 +635,55 @@ main .mobile-footer {
     background-color: transparent;
     color: #ffffff;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]::-moz-placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]::-moz-placeholder {
     -moz-transition: all 0.5s;
     transition: all 0.5s;
     opacity: 1;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]::placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]::placeholder {
     transition: all 0.5s;
     opacity: 1;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]:focus {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]:focus {
     outline: none;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]:focus::-moz-placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]:focus::-moz-placeholder {
     opacity: 0;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]:focus::placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]:focus::placeholder {
     opacity: 0;
   }
-  main .tablet-header .header-inner .inner-right .search-bar .fa-magnifying-glass {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    .fa-magnifying-glass {
     font-size: 1.6rem;
     color: #c1c7cd;
   }
@@ -724,7 +790,13 @@ main .mobile-footer {
     order: 1;
     gap: 20px;
   }
-  main section #cdy-contents03 .cdy-location .location-sub .location-sub1 .lo-img {
+  main
+    section
+    #cdy-contents03
+    .cdy-location
+    .location-sub
+    .location-sub1
+    .lo-img {
     width: 362px;
     height: 147px;
     border-radius: 5px;
@@ -880,7 +952,13 @@ main .mobile-footer {
   main section #cdy-contents01 .img .maintitle .playbtn .fa-heart {
     font-size: 1.4rem;
   }
-  main section #cdy-contents01 .img .maintitle .playbtn .fa-arrow-right-to-bracket {
+  main
+    section
+    #cdy-contents01
+    .img
+    .maintitle
+    .playbtn
+    .fa-arrow-right-to-bracket {
     font-size: 1.4rem;
   }
   main section #cdy-contents01 .cdy-container {
@@ -957,7 +1035,13 @@ main .mobile-footer {
   main section #cdy-contents03 .cdy-location .location-sub .location-sub1 {
     font-size: 1.2rem;
   }
-  main section #cdy-contents03 .cdy-location .location-sub .location-sub1 .lo-img {
+  main
+    section
+    #cdy-contents03
+    .cdy-location
+    .location-sub
+    .location-sub1
+    .lo-img {
     width: 325px;
     height: 160px;
   }
@@ -1033,8 +1117,4 @@ main .mobile-footer {
     font-size: 1.2rem;
     color: #c1c7cd;
   }
-<<<<<<< HEAD
-}/*# sourceMappingURL=detail.css.map */
-=======
 }
->>>>>>> 77df8bd6bbefc0de1dd47978d1b1ea86ae812ca7
