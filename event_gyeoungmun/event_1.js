@@ -6,6 +6,7 @@ const check2 = document.querySelector("#check2");
 const check3 = document.querySelector("#check3");
 const check4 = document.querySelector("#check4");
 const h4 = document.querySelector(".h4");
+const main = document.querySelector(".lgm_main_section");
 
 function h1func() {
   setTimeout(() => {
