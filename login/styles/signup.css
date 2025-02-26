@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ a {
   color: inherit;
 }
 
+/*==== header & footer ====*/
 /*==== lsi ====*/
 html {
   font-size: 62.5%;
@@ -302,4 +304,4 @@ body {
   .lsi-signup-form .lsi-signup-btn:hover {
     color: #ffffff;
   }
-}/*# sourceMappingURL=signup.css.map */
+}
