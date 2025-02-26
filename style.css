@@ -17,6 +17,7 @@ a {
 
 /* variables */
 /* mixin */
+/*==== header & footer ====*/
 /*==== lsi ====*/
 html {
   font-size: 62.5%;
@@ -1218,4 +1219,4 @@ body {
   100% {
     transform: translateY(-99%);
   }
-}/*# sourceMappingURL=style.css.map */
+}

@@ -15,6 +15,7 @@ a {
   color: inherit;
 }
 
+/*==== header & footer ====*/
 /*==== lsi ====*/
 html {
   font-size: 62.5%;
@@ -302,4 +303,4 @@ body {
   .lsi-signup-form .lsi-signup-btn:hover {
     color: #ffffff;
   }
-}/*# sourceMappingURL=signup.css.map */
+}

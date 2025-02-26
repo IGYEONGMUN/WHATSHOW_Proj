@@ -1,3 +1,24 @@
+// API
+import { API_KEY } from "./env.js";
+
+// Common URL
+const tmdbCommand = "https://api.themoviedb.org/3";
+
+// NowPlaying DB
+const nowPlaying = async () => {
+  const url = `${tmdbCommand}/movie/now_playing?api_key=${API_KEY}&language=ko-KR&page=1`;
+  const response = await fetch(url);
+  const { results } = await response.json();
+  return results.map(({ id, backdrop_path }) => ({
+    id,
+    backdrop_path,
+  }));
+};
+console.log(nowPlaying());
+
+getMovies();
+
+// Hover Event
 const hoversUp = document.querySelectorAll(".hover-up");
 const hoversDown = document.querySelectorAll(".hover-down");
 const hoversScale = document.querySelectorAll(".hover-scale");

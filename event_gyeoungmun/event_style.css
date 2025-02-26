@@ -14,6 +14,7 @@ a {
   color: inherit;
 }
 
+/*==== header & footer ====*/
 /*==== lsi ====*/
 html {
   font-size: 62.5%;
@@ -373,4 +374,4 @@ h2 {
     transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
-}/*# sourceMappingURL=event_style.css.map */
+}
