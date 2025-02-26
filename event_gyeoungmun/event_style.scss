@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: map-get($map: $color, $key: dark);
 }
 
 #lgm_container {
@@ -28,8 +29,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #ddd;
+  color: map-get($map: $color, $key: light);
   border-radius: 10px;
+  background: map-get($map: $color, $key: dark);
 
   .lgm_top_header {
     p {
@@ -59,9 +61,10 @@ body {
   }
   .lgm_top_contents {
     margin-top: 20px;
-    background: #ddd;
     padding: 20px;
     border-radius: 10px;
+    background: map-get($map: $color, $key: dark);
+
     .lgm_top_contents_inner {
       .content {
         margin: 20px 0;
@@ -99,7 +102,8 @@ body {
   flex-direction: column;
   align-items: center;
   .lgm_main_content {
-    background: #ddd;
+    color: map-get($map: $color, $key: light);
+    background: map-get($map: $color, $key: dark);
     border-radius: 10px;
     padding: 20px;
     margin: 40px 0;
@@ -111,7 +115,9 @@ body {
       height: 610px;
       margin-top: 15px;
       border-radius: 10px;
-      background: #fff;
+      background: map-get($map: $color, $key: dark);
+      color: map-get($map: $color, $key: light);
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -121,6 +127,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
           width: 200px;
           height: 200px;
@@ -131,8 +138,9 @@ body {
           width: 750px;
           height: 500px;
           margin-left: 40px;
-          background: #626268;
 
+          color: map-get($map: $color, $key: light);
+          background: map-get($map: $color, $key: dark);
           border-radius: 10px;
           display: flex;
           justify-content: center;
