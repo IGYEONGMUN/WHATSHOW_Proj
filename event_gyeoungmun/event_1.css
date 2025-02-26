@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lgm_container {
+  border: 1px solid #f00;
+  width: 80%;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: "Do Hyeon";
+  font-weight: 10px;
+}
+
+.lgm_top_header {
+  width: 100%;
+  height: 600px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 40px;
+  line-height: 90px;
+}
+.lgm_top_header .lgm_checkImg {
+  margin-top: 20px;
+  letter-spacing: 28px;
+  color: pink;
+}
+.lgm_top_header h4 {
+  font-family: "Noto Sans KR";
+  letter-spacing: 5px;
+}
+.lgm_top_header .h1_1 {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.lgm_top_header .h1_2 {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.lgm_top_header .h1_3 {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.lgm_top_header #check1 {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.lgm_top_header #check2 {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.lgm_top_header #check3 {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.lgm_top_header #check4 {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.lgm_top_header .h4 {
+  opacity: 0;
+  transition: all 0.5s;
+}/*# sourceMappingURL=event_1.css.map */
