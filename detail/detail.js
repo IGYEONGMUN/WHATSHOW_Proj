@@ -1,7 +1,6 @@
-// style
+/* ==================== Style ==================== */
 const hovers = document.querySelectorAll(".hover");
 const hoverups = document.querySelectorAll(".translate");
-// console.log(hovers);
 
 hovers.forEach((hover) => {
   hover.addEventListener("mouseover", () => {

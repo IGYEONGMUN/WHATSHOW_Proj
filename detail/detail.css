@@ -1,5 +1,6 @@
 /*==== header & footer ====*/
 /*==== lsi ====*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +27,10 @@ body {
 
 main {
   width: 100%;
+  height: 100%;
   background: #000000;
   color: #ffffff;
+  font-family: "Noto Sans KR";
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,7 +100,7 @@ main .web-header .header-inner .inner-right .search-bar {
   border-bottom: 1px solid #c1c7cd;
   padding: 0 10px;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text] {
+main .web-header .header-inner .inner-right .search-bar input[type="text"] {
   width: 200px;
   height: 40px;
   border: none;
@@ -105,22 +108,47 @@ main .web-header .header-inner .inner-right .search-bar input[type=text] {
   background-color: transparent;
   color: #ffffff;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]::-moz-placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]::-moz-placeholder {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   opacity: 1;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]::placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]::placeholder {
   transition: all 0.5s;
   opacity: 1;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]:focus {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]:focus {
   outline: none;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]:focus::-moz-placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]:focus::-moz-placeholder {
   opacity: 0;
 }
-main .web-header .header-inner .inner-right .search-bar input[type=text]:focus::placeholder {
+main
+  .web-header
+  .header-inner
+  .inner-right
+  .search-bar
+  input[type="text"]:focus::placeholder {
   opacity: 0;
 }
 main .web-header .header-inner .inner-right .search-bar .fa-magnifying-glass {
@@ -145,7 +173,6 @@ main .mobile-header {
 main section {
   width: 1200px;
   height: 100%;
-  border: 1px solid #f00;
 }
 main section #cdy-contents01 {
   margin-top: 150px;
@@ -156,11 +183,14 @@ main section #cdy-contents01 {
   gap: 20px;
 }
 main section #cdy-contents01 .img {
-  border: 1px solid #f00;
+  position: relative;
+}
+main section #cdy-contents01 .img img {
   width: 590px;
   height: 381px;
   border-radius: 5px;
-  position: relative;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 main section #cdy-contents01 .img .maintitle {
   display: flex;
@@ -192,7 +222,13 @@ main section #cdy-contents01 .img .maintitle .playbtn .fa-heart {
   cursor: pointer;
   font-size: 2.2rem;
 }
-main section #cdy-contents01 .img .maintitle .playbtn .fa-arrow-right-to-bracket {
+main
+  section
+  #cdy-contents01
+  .img
+  .maintitle
+  .playbtn
+  .fa-arrow-right-to-bracket {
   transform: rotate(90deg);
   cursor: pointer;
   font-size: 2.2rem;
@@ -256,6 +292,20 @@ main section #cdy-contents01 .cdy-container .cdy-actors .actors-left {
   align-items: center;
   gap: 5px;
 }
+main
+  section
+  #cdy-contents01
+  .cdy-container
+  .cdy-actors
+  .actors-left
+  .actor
+  img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 main section #cdy-contents01 .cdy-container .cdy-actors .actors-right {
   display: flex;
   flex-direction: column;
@@ -263,11 +313,19 @@ main section #cdy-contents01 .cdy-container .cdy-actors .actors-right {
   align-items: center;
   gap: 5px;
 }
-main section #cdy-contents01 .cdy-container .cdy-actors .actor {
-  border: 1px solid #f00;
+main
+  section
+  #cdy-contents01
+  .cdy-container
+  .cdy-actors
+  .actors-right
+  .actor
+  img {
   width: 85px;
   height: 85px;
   border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 main section #cdy-contents02 {
   width: 100%;
@@ -279,13 +337,14 @@ main section #cdy-contents02 .cdy-epi {
   margin-top: 15px;
   gap: 20px;
 }
-main section #cdy-contents02 .cdy-epi .epi .epi-img {
-  border: 1px solid #f00;
+main section #cdy-contents02 .cdy-epi .epi .epi-img img {
   margin-bottom: 5px;
   cursor: pointer;
   width: 290px;
   height: 180px;
   border-radius: 5px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 main section .slick-track {
   display: flex !important;
@@ -359,11 +418,12 @@ main section #cdy-contents03 .cdy-location .location-sub .location-sub1 {
   align-items: center;
   gap: 5px;
 }
-main section #cdy-contents03 .cdy-location .location-sub .lo-img {
+main section #cdy-contents03 .cdy-location .location-sub .lo-img img {
   width: 387px;
   height: 183px;
   border-radius: 5px;
-  border: 1px solid #f00;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 main section #cdy-contents03 .cdy-ost {
   display: flex;
@@ -390,11 +450,10 @@ main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con {
   flex-direction: column;
   gap: 5px;
 }
-main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img {
+main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img img {
   width: 183px;
   height: 183px;
   border-radius: 5px;
-  border: 1px solid #f00;
 }
 main section #cdy-contents03 .cdy-ost .cdy-ostcon2 {
   display: flex;
@@ -406,11 +465,10 @@ main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con {
   flex-direction: column;
   gap: 5px;
 }
-main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img {
+main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img img {
   width: 183px;
   height: 183px;
   border-radius: 5px;
-  border: 1px solid #f00;
 }
 main section #cdy-contents03 .cdy-goods {
   display: flex;
@@ -437,11 +495,10 @@ main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub {
   flex-direction: column;
   gap: 5px;
 }
-main section #cdy-contents03 .cdy-goods .goods-con1 .goods-img {
+main section #cdy-contents03 .cdy-goods .goods-con1 .goods-img img {
   width: 183px;
   height: 183px;
   border-radius: 5px;
-  border: 1px solid #f00;
 }
 main section #cdy-contents04 {
   width: 100%;
@@ -455,8 +512,7 @@ main section #cdy-contents04 .cdy-cons {
   justify-content: space-between;
   margin-top: 15px;
 }
-main section #cdy-contents04 .cdy-cons .sub {
-  border: 1px solid dodgerblue;
+main section #cdy-contents04 .cdy-cons .sub img {
   width: 183px;
   height: 250px;
   border-radius: 5px;
@@ -591,7 +647,12 @@ main .mobile-footer {
     border-bottom: 1px solid #c1c7cd;
     padding: 0 10px;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text] {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"] {
     width: 250px;
     height: 40px;
     border: none;
@@ -599,25 +660,55 @@ main .mobile-footer {
     background-color: transparent;
     color: #ffffff;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]::-moz-placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]::-moz-placeholder {
     -moz-transition: all 0.5s;
     transition: all 0.5s;
     opacity: 1;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]::placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]::placeholder {
     transition: all 0.5s;
     opacity: 1;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]:focus {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]:focus {
     outline: none;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]:focus::-moz-placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]:focus::-moz-placeholder {
     opacity: 0;
   }
-  main .tablet-header .header-inner .inner-right .search-bar input[type=text]:focus::placeholder {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    input[type="text"]:focus::placeholder {
     opacity: 0;
   }
-  main .tablet-header .header-inner .inner-right .search-bar .fa-magnifying-glass {
+  main
+    .tablet-header
+    .header-inner
+    .inner-right
+    .search-bar
+    .fa-magnifying-glass {
     font-size: 1.6rem;
     color: #c1c7cd;
   }
@@ -640,7 +731,7 @@ main .mobile-footer {
   main section #cdy-contents01 {
     width: 100%;
   }
-  main section #cdy-contents01 .img {
+  main section #cdy-contents01 .img img {
     width: 556px;
     height: 364px;
     border-radius: 5px;
@@ -680,7 +771,7 @@ main .mobile-footer {
     margin-top: 15px;
     gap: 20px;
   }
-  main section #cdy-contents02 .cdy-epi .epi .epi-img {
+  main section #cdy-contents02 .cdy-epi .epi .epi-img img {
     width: 172px;
     height: 100px;
     border-radius: 5px;
@@ -724,7 +815,13 @@ main .mobile-footer {
     order: 1;
     gap: 20px;
   }
-  main section #cdy-contents03 .cdy-location .location-sub .location-sub1 .lo-img {
+  main
+    section
+    #cdy-contents03
+    .cdy-location
+    .location-sub
+    .location-sub1
+    .lo-img {
     width: 362px;
     height: 147px;
     border-radius: 5px;
@@ -738,12 +835,12 @@ main .mobile-footer {
   main section #cdy-contents03 .cdy-ost h3 {
     margin-top: -20px;
   }
-  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img {
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img img {
     width: 172px;
     height: 172px;
     border-radius: 5px;
   }
-  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img {
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img img {
     width: 172px;
     height: 172px;
     border-radius: 5px;
@@ -761,7 +858,7 @@ main .mobile-footer {
   main section #cdy-contents03 .cdy-goods .goods-con1 {
     order: 1;
   }
-  main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub .goods-img {
+  main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub .goods-img img {
     width: 172px;
     height: 172px;
     border-radius: 5px;
@@ -857,8 +954,9 @@ main .mobile-footer {
   }
   main section #cdy-contents01 {
     flex-direction: column;
+    margin-top: 100px;
   }
-  main section #cdy-contents01 .img {
+  main section #cdy-contents01 .img img {
     width: 320px;
     height: 250px;
     border-radius: 5px;
@@ -880,7 +978,13 @@ main .mobile-footer {
   main section #cdy-contents01 .img .maintitle .playbtn .fa-heart {
     font-size: 1.4rem;
   }
-  main section #cdy-contents01 .img .maintitle .playbtn .fa-arrow-right-to-bracket {
+  main
+    section
+    #cdy-contents01
+    .img
+    .maintitle
+    .playbtn
+    .fa-arrow-right-to-bracket {
     font-size: 1.4rem;
   }
   main section #cdy-contents01 .cdy-container {
@@ -916,7 +1020,7 @@ main .mobile-footer {
   main section #cdy-contents02 .cdy-epi .epi p {
     font-size: 1.2rem;
   }
-  main section #cdy-contents02 .cdy-epi .epi .epi-img {
+  main section #cdy-contents02 .cdy-epi .epi .epi-img img {
     width: 160px;
     height: 77px;
     border-radius: 5px;
@@ -942,6 +1046,7 @@ main .mobile-footer {
   }
   main section #cdy-contents03 {
     flex-direction: column;
+    margin-top: 10px;
   }
   main section #cdy-contents03 h3 {
     font-size: 1.6rem;
@@ -957,7 +1062,13 @@ main .mobile-footer {
   main section #cdy-contents03 .cdy-location .location-sub .location-sub1 {
     font-size: 1.2rem;
   }
-  main section #cdy-contents03 .cdy-location .location-sub .location-sub1 .lo-img {
+  main
+    section
+    #cdy-contents03
+    .cdy-location
+    .location-sub
+    .location-sub1
+    .lo-img {
     width: 325px;
     height: 160px;
   }
@@ -967,7 +1078,7 @@ main .mobile-footer {
   main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con {
     font-size: 1.2rem;
   }
-  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img {
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon1 .ost-con .ost-img img {
     width: 160px;
     height: 160px;
     border-radius: 5px;
@@ -978,7 +1089,7 @@ main .mobile-footer {
   main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con {
     font-size: 1.2rem;
   }
-  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img {
+  main section #cdy-contents03 .cdy-ost .cdy-ostcon2 .ost-con .ost-img img {
     width: 160px;
     height: 160px;
     border-radius: 5px;
@@ -989,7 +1100,7 @@ main .mobile-footer {
   main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub {
     font-size: 1.2rem;
   }
-  main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub .goods-img {
+  main section #cdy-contents03 .cdy-goods .goods-con1 .goodssub .goods-img img {
     width: 160px;
     height: 160px;
     border-radius: 5px;

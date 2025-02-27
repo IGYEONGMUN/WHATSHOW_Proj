@@ -2,6 +2,8 @@
 @import "../styles/reset.scss";
 @import "../styles/variables.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
 html {
   font-size: 62.5%;
 }
@@ -12,8 +14,10 @@ body {
 
 main {
   width: 100%;
+  height: 100%;
   background: map-get($map: $color, $key: dark);
   color: map-get($map: $color, $key: light);
+  font-family: map-get($map: $font, $key: noto);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +37,6 @@ main {
   section {
     width: 1200px;
     height: 100%;
-    border: 1px solid #f00;
 
     #cdy-contents01 {
       margin-top: 150px;
@@ -43,8 +46,10 @@ main {
       width: 100%;
       gap: 20px;
       .img {
-        border: 1px solid #f00;
-        @include size-590-381;
+        img {
+          @include size-590-381;
+          object-fit: cover;
+        }
         position: relative;
         .maintitle {
           display: flex;
@@ -138,6 +143,12 @@ main {
             flex-direction: column;
             align-items: center;
             gap: 5px;
+            .actor {
+              img {
+                @include size-85-85;
+                object-fit: cover;
+              }
+            }
           }
           .actors-right {
             display: flex;
@@ -145,10 +156,12 @@ main {
             justify-content: center;
             align-items: center;
             gap: 5px;
-          }
-          .actor {
-            border: 1px solid #f00;
-            @include size-85-85;
+            .actor {
+              img {
+                @include size-85-85;
+                object-fit: cover;
+              }
+            }
           }
         }
       }
@@ -164,10 +177,12 @@ main {
         gap: 20px;
         .epi {
           .epi-img {
-            border: 1px solid #f00;
-            margin-bottom: 5px;
-            cursor: pointer;
-            @include size-290-180;
+            img {
+              margin-bottom: 5px;
+              cursor: pointer;
+              @include size-290-180;
+              object-fit: cover;
+            }
           }
         }
       }
@@ -248,8 +263,10 @@ main {
             gap: 5px;
           }
           .lo-img {
-            @include size-387-183;
-            border: 1px solid #f00;
+            img {
+              @include size-387-183;
+              object-fit: cover;
+            }
           }
         }
       }
@@ -276,8 +293,9 @@ main {
             flex-direction: column;
             gap: 5px;
             .ost-img {
-              @include size-183-183;
-              border: 1px solid #f00;
+              img {
+                @include size-183-183;
+              }
             }
           }
         }
@@ -290,8 +308,9 @@ main {
             flex-direction: column;
             gap: 5px;
             .ost-img {
-              @include size-183-183;
-              border: 1px solid #f00;
+              img {
+                @include size-183-183;
+              }
             }
           }
         }
@@ -320,8 +339,9 @@ main {
             gap: 5px;
           }
           .goods-img {
-            @include size-183-183;
-            border: 1px solid #f00;
+            img {
+              @include size-183-183;
+            }
           }
         }
       }
@@ -337,9 +357,10 @@ main {
         justify-content: space-between;
         margin-top: 15px;
         .sub {
-          border: 1px solid dodgerblue;
-          @include size-183-250;
-          cursor: pointer;
+          img {
+            @include size-183-250;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -373,7 +394,9 @@ main {
       #cdy-contents01 {
         width: 100%;
         .img {
-          @include size-556-364;
+          img {
+            @include size-556-364;
+          }
         }
         .cdy-container {
           width: 357px;
@@ -412,7 +435,9 @@ main {
           gap: 20px;
           .epi {
             .epi-img {
-              @include size-172-100;
+              img {
+                @include size-172-100;
+              }
             }
           }
         }
@@ -456,7 +481,9 @@ main {
             gap: 20px;
             .location-sub1 {
               .lo-img {
-                @include size-362-147;
+                img {
+                  @include size-362-147;
+                }
               }
             }
           }
@@ -472,14 +499,18 @@ main {
           .cdy-ostcon1 {
             .ost-con {
               .ost-img {
-                @include size-172-172;
+                img {
+                  @include size-172-172;
+                }
               }
             }
           }
           .cdy-ostcon2 {
             .ost-con {
               .ost-img {
-                @include size-172-172;
+                img {
+                  @include size-172-172;
+                }
               }
             }
           }
@@ -497,7 +528,9 @@ main {
             order: 1;
             .goodssub {
               .goods-img {
-                @include size-172-172;
+                img {
+                  @include size-172-172;
+                }
               }
             }
           }
@@ -536,8 +569,11 @@ main {
       height: 100%;
       #cdy-contents01 {
         flex-direction: column;
+        margin-top: 100px;
         .img {
-          @include size-320-250;
+          img {
+            @include size-320-250;
+          }
           .maintitle {
             bottom: 20px;
             left: 20px;
@@ -598,7 +634,9 @@ main {
               font-size: 1.2rem;
             }
             .epi-img {
-              @include size-160-77;
+              img {
+                @include size-160-77;
+              }
             }
           }
         }
@@ -624,6 +662,7 @@ main {
       }
       #cdy-contents03 {
         flex-direction: column;
+        margin-top: 10px;
         h3 {
           font-size: 1.6rem;
           display: flex;
@@ -636,8 +675,10 @@ main {
             .location-sub1 {
               font-size: 1.2rem;
               .lo-img {
-                width: 325px;
-                height: 160px;
+                img {
+                  width: 325px;
+                  height: 160px;
+                }
               }
             }
           }
@@ -648,7 +689,9 @@ main {
             .ost-con {
               font-size: 1.2rem;
               .ost-img {
-                @include size-160-160;
+                img {
+                  @include size-160-160;
+                }
               }
             }
           }
@@ -657,7 +700,9 @@ main {
             .ost-con {
               font-size: 1.2rem;
               .ost-img {
-                @include size-160-160;
+                img {
+                  @include size-160-160;
+                }
               }
             }
           }
@@ -668,7 +713,9 @@ main {
             .goodssub {
               font-size: 1.2rem;
               .goods-img {
-                @include size-160-160;
+                img {
+                  @include size-160-160;
+                }
               }
             }
           }
