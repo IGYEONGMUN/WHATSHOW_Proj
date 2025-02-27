@@ -7,53 +7,55 @@ const check2 = document.querySelector("#check2");
 const check3 = document.querySelector("#check3");
 const check4 = document.querySelector("#check4");
 const h4 = document.querySelector(".h4");
-const main = document.querySelector(".lgm_main_section");
+
 const rotateImg = document.querySelector(".lgm_main_section");
 const rotateDesc = document.querySelector(".desc");
 const mainInput = document.querySelector(".main_input");
+const rotateImg2 = document.querySelector(".lgm_main_section2");
+const rotateDesc2 = document.querySelector(".desc2");
 
 function p1func() {
   setTimeout(() => {
     p1.style.opacity = "1";
-  }, 1200);
+  }, 1000);
 }
 
 function p2func() {
   setTimeout(() => {
     p2.style.opacity = "1";
-  }, 3900);
+  }, 3700);
 }
 function h3func() {
   setTimeout(() => {
     h1_3.style.opacity = "1";
-  }, 5500);
+  }, 5300);
 }
 
 function checkone() {
   setTimeout(() => {
     check1.style.opacity = "1";
-  }, 2500);
+  }, 2300);
 }
 function checktwo() {
   setTimeout(() => {
     check2.style.opacity = "1";
-  }, 2700);
+  }, 2500);
 }
 function checkthree() {
   setTimeout(() => {
     check3.style.opacity = "1";
-  }, 2900);
+  }, 2700);
 }
 function checkfour() {
   setTimeout(() => {
     check4.style.opacity = "1";
-  }, 3100);
+  }, 2900);
 }
 
 function p4func() {
   setTimeout(() => {
     p4.style.opacity = "1";
-  }, 7200);
+  }, 7000);
 }
 
 p1func();
@@ -77,4 +79,29 @@ window.addEventListener("scroll", () => {
       mainInput.style.opacity = "1";
     }, 7500);
   }
+});
+
+//second section
+
+const mainImg2 = document.querySelector(".lgm_main_section2");
+const mainDesc2 = document.querySelector(".lgm_main_section2_desc");
+const mainInput2 = document.querySelector(".main_input2");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 1250) {
+    mainImg2.style.opacity = "1";
+    setTimeout(() => {
+      mainDesc2.style.opacity = "1";
+    }, 3000);
+
+    setTimeout(() => {
+      mainInput2.style.opacity = "1";
+    }, 6000);
+  }
+});
+
+const submitBtn = document.querySelector(".submit");
+
+submitBtn.addEventListener("click", () => {
+  window.location.href = "../login/login.html";
 });
