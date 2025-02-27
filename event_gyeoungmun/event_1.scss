@@ -1,0 +1,223 @@
+@import "../styles/variables.scss";
+@import "../styles/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+body {
+  background: map-get($map: $color, $key: dark);
+  color: map-get($map: $color, $key: light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lgm_container {
+  width: 1200px;
+  height: 320vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  font-family: map-get($map: $font, $key: dohyeon);
+  font-weight: 10px;
+}
+
+.lgm_top_header {
+  width: 100%;
+  height: 700px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 40px;
+  line-height: 90px;
+  .lgm_checkImg {
+    margin-top: 20px;
+    letter-spacing: 28px;
+    color: pink;
+  }
+
+  .p_1 {
+    opacity: 0;
+    transition: all 2s;
+  }
+  .p_2 {
+    opacity: 0;
+    transition: all 2s;
+    letter-spacing: 70px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+  }
+  .h1_3 {
+    opacity: 0;
+    transition: all 1.5s;
+  }
+  .p4 {
+    font-family: map-get($map: $font, $key: noto);
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    line-height: 50px;
+    opacity: 0;
+    margin-top: 150px;
+  }
+
+  #check1 {
+    opacity: 0;
+    transition: all 1s;
+  }
+  #check2 {
+    opacity: 0;
+    transition: all 1s;
+  }
+  #check3 {
+    opacity: 0;
+    transition: all 1s;
+  }
+  #check4 {
+    opacity: 0;
+    transition: all 1s;
+  }
+  .p4 {
+    opacity: 0;
+    transition: all 2s;
+  }
+}
+
+.lgm_main_outer_section1 {
+  width: 100%;
+  height: 900px;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .lgm_main_section {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &.rotate {
+      transition: all 3s;
+
+      animation: spin 3s linear forwards;
+    }
+  }
+  .desc {
+    width: 700px;
+    height: 450px;
+    margin-top: 90px;
+    opacity: 0;
+    transition: opacity 4s;
+    &.scroll {
+      opacity: 1;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 60px;
+    }
+  }
+  .main_input {
+    display: flex;
+    transition: opacity 4s;
+    opacity: 0;
+    margin-top: 10px;
+    gap: 20px;
+    font-size: 2rem;
+    input {
+      padding: 10px;
+      outline: none;
+    }
+  }
+}
+.lgm_main_outer_section2 {
+  width: 100%;
+  height: 1000px;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .lgm_main_section2 {
+    width: 200px;
+    height: 230px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 2s;
+    img {
+      object-fit: center/contain no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .lgm_main_section2_desc {
+    width: 700px;
+    height: 350px;
+    margin-top: 90px;
+    opacity: 0;
+    transition: opacity 4s;
+
+    p {
+      font-size: 2rem;
+      line-height: 60px;
+    }
+  }
+  .main_input2 {
+    display: flex;
+    transition: opacity 4s;
+    opacity: 0;
+    margin-top: 10px;
+    gap: 20px;
+    font-size: 2rem;
+    input {
+      padding: 10px;
+      outline: none;
+    }
+  }
+}
+button {
+  margin-top: 8% 8%;
+  padding: 1.3em 3em;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: pink;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(-500px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(360deg);
+  }
+}
