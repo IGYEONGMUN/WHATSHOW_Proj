@@ -137,9 +137,10 @@ body {
       flex-direction: column;
       gap: 20px;
       .smk-content-top {
-        @include size-1200-793;
-        border: 1px solid #f00;
         position: relative;
+        img {
+          @include size-1200-793;
+        }
         h2 {
           color: map-get($map: $color, $key: light);
           position: absolute;
@@ -149,10 +150,11 @@ body {
       }
       .smk-content-bottom {
         display: flex;
-        gap: 20px;
+        justify-content: space-between;
         .smk-bottom-item {
-          background: #fff;
-          @include size-183-183;
+          img {
+            @include size-183-183;
+          }
         }
       }
     }
@@ -170,7 +172,6 @@ body {
         .smk-left-item {
           &:nth-child(1) {
             @include size-387-183;
-            border: 1px solid #f00;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -179,12 +180,14 @@ body {
             }
           }
           &:nth-child(2) {
-            @include size-387-387;
-            background: #fff;
+            img {
+              @include size-387-387;
+            }
           }
           &:nth-child(3) {
-            @include size-387-590;
-            background: #fff;
+            img {
+              @include size-387-590;
+            }
           }
         }
       }
@@ -198,22 +201,19 @@ body {
           &:nth-child(1) {
             display: flex;
             gap: 20px;
-            .smk-right-item-01 {
+            img {
               @include size-387-387;
-              background: #fff;
-            }
-            .smk-right-item-02 {
-              @include size-387-387;
-              background: #fff;
             }
           }
           &:nth-child(2) {
-            @include size-793-387;
-            background: #fff;
+            img {
+              @include size-793-387;
+            }
           }
           &:nth-child(3) {
-            @include size-793-387;
-            background: #fff;
+            img {
+              @include size-793-387;
+            }
           }
         }
       }
@@ -235,14 +235,14 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          border: 1px solid #f00;
           h2 {
             color: map-get($map: $color, $key: light);
           }
         }
         .smk-top-item-02 {
-          @include size-183-183;
-          background: #fff;
+          img {
+            @include size-183-183;
+          }
         }
       }
       .smk-content-middle {
@@ -251,8 +251,9 @@ body {
         gap: 20px;
         .smk-middle-item {
           flex-shrink: 0;
-          @include size-387-183;
-          border: 1px solid #f00;
+          img {
+            @include size-387-183;
+          }
         }
       }
       .smk-content-bottom {
@@ -261,8 +262,9 @@ body {
         gap: 20px;
         .smk-bottom-item {
           flex-shrink: 0;
-          @include size-387-183;
-          border: 1px solid #f00;
+          img {
+            @include size-387-183;
+          }
         }
       }
     }
@@ -278,8 +280,9 @@ body {
           color: map-get($map: $color, $key: light);
         }
         .smk-left-item {
-          @include size-793-792;
-          border: 1px solid #f00;
+          img {
+            @include size-793-792;
+          }
         }
       }
       .smk-content-right {
@@ -287,8 +290,9 @@ body {
         flex-direction: column;
         gap: 20px;
         .smk-right-item {
-          @include size-387-183;
-          background: #fff;
+          img {
+            @include size-387-183;
+          }
         }
       }
     }
@@ -547,17 +551,27 @@ body {
           flex-direction: column;
           gap: 20px;
           .content-left-top {
+            position: relative;
+            h2 {
+              position: absolute;
+              top: 15px;
+              left: 15px;
+              color: #ffffff;
+              font-size: 1.8rem;
+            }
             .left-top-item {
-              @include size-556-364;
-              border: 1px solid #f00;
+              img {
+                @include size-556-364;
+              }
             }
           }
           .content-left-bottom {
             display: flex;
             gap: 20px;
             .left-bottom-item {
-              @include size-172-172;
-              border: 1px solid #f00;
+              img {
+                @include size-172-172;
+              }
             }
           }
         }
@@ -567,16 +581,18 @@ body {
           gap: 20px;
           .content-right-top {
             .right-top-item {
-              @include size-364-364;
-              border: 1px solid #f00;
+              img {
+                @include size-364-364;
+              }
             }
           }
           .content-right-bottom {
             display: flex;
             gap: 20px;
             .right-bottom-item {
-              @include size-172-172;
-              border: 1px solid #f00;
+              img {
+                @include size-172-172;
+              }
             }
           }
         }
@@ -591,15 +607,25 @@ body {
           .content-left-top {
             display: flex;
             gap: 20px;
-            .left-top-item {
+            h2 {
               @include size-172-172;
-              border: 1px solid #f00;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.8rem;
+              color: map-get($map: $color, $key: light);
+            }
+            .left-top-item {
+              img {
+                @include size-172-172;
+              }
             }
           }
           .content-left-bottom {
             .left-bottom-item {
-              @include size-364-172;
-              border: 1px solid #f00;
+              img {
+                @include size-364-172;
+              }
             }
           }
         }
@@ -611,21 +637,24 @@ body {
             display: flex;
             gap: 20px;
             .middle-top-item {
-              @include size-172-172;
-              border: 1px solid #f00;
+              img {
+                @include size-172-172;
+              }
             }
           }
           .content-middle-bottom {
             .middle-bottom-item {
-              @include size-364-172;
-              border: 1px solid #f00;
+              img {
+                @include size-364-172;
+              }
             }
           }
         }
         .smk-content-right {
           .content-right-item {
-            @include size-172-364;
-            border: 1px solid #f00;
+            img {
+              @include size-172-364;
+            }
           }
         }
       }
@@ -638,8 +667,17 @@ body {
           display: flex;
           gap: 20px;
           .smk-top-item {
-            @include size-172-172;
-            border: 1px solid #f00;
+            h2 {
+              @include size-172-172;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.8rem;
+              color: map-get($map: $color, $key: light);
+            }
+            img {
+              @include size-172-172;
+            }
           }
         }
         .smk-content-middle {
@@ -648,8 +686,9 @@ body {
           animation: slide-01 20s linear infinite;
           .smk-middle-item {
             flex-shrink: 0;
-            @include size-364-172;
-            border: 1px solid #f00;
+            img {
+              @include size-364-172;
+            }
           }
         }
         .smk-content-bottom {
@@ -658,8 +697,9 @@ body {
           animation: slide-02 20s linear infinite;
           .smk-bottom-item {
             flex-shrink: 0;
-            @include size-364-172;
-            border: 1px solid #f00;
+            img {
+              @include size-364-172;
+            }
           }
         }
       }
@@ -669,9 +709,8 @@ body {
         gap: 20px;
         overflow: hidden;
         .smk-content-left {
+          @include size-556-556;
           .content-left-item {
-            @include size-556-556;
-            border: 1px solid #f00;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -681,6 +720,10 @@ body {
               top: 15px;
               left: 15px;
               color: map-get($map: $color, $key: light);
+              font-size: 1.8rem;
+            }
+            img {
+              @include size-556-556;
             }
           }
         }
@@ -691,8 +734,9 @@ body {
           animation: slide-03 20s linear infinite;
           .content-right-item {
             flex-shrink: 0;
-            @include size-364-172;
-            border: 1px solid #f00;
+            img {
+              @include size-364-172;
+            }
           }
         }
       }
@@ -974,17 +1018,27 @@ body {
           flex-direction: column;
           gap: 5px;
           .content-left-top {
+            position: relative;
             .left-top-item {
-              @include size-243-160;
-              border: 1px solid #f00;
+              h2 {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: map-get($map: $color, $key: light);
+                font-size: 1.4rem;
+              }
+              img {
+                @include size-243-160;
+              }
             }
           }
           .content-left-bottom {
             display: flex;
             gap: 5px;
             .left-bottom-item {
-              @include size-77-77;
-              border: 1px solid #f00;
+              img {
+                @include size-77-77;
+              }
             }
           }
         }
@@ -993,8 +1047,9 @@ body {
           flex-direction: column;
           gap: 5px;
           .content-right-item {
-            @include size-77-77;
-            border: 1px solid #f00;
+            img {
+              @include size-77-77;
+            }
           }
         }
       }
@@ -1005,38 +1060,57 @@ body {
           display: flex;
           flex-direction: column;
           gap: 5px;
-          .content-left-item {
-            @include size-160-77;
-            border: 1px solid #f00;
+          .content-left-top {
+            position: relative;
+            .left-top-item {
+              h2 {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: map-get($map: $color, $key: light);
+                font-size: 1.4rem;
+              }
+              img {
+                @include size-243-160;
+              }
+            }
           }
-        }
-        .smk-content-middle {
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-          .content-middle-item {
-            @include size-77-77;
-            border: 1px solid #f00;
+          .content-left-bottom {
+            display: flex;
+            gap: 5px;
+            .left-bottom-item {
+              img {
+                @include size-77-77;
+              }
+            }
           }
         }
         .smk-content-right {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
           .content-right-item {
-            @include size-77-241;
-            border: 1px solid #f00;
+            img {
+              @include size-77-77;
+            }
           }
         }
       }
+
       .smk-content-03 {
         display: flex;
         flex-direction: column;
         gap: 5px;
         overflow: hidden;
+
         .smk-content-top {
           display: flex;
           gap: 5px;
+
           .content-top-item {
-            @include size-77-77;
-            border: 1px solid #f00;
+            img {
+              @include size-77-77;
+            }
           }
         }
         .smk-content-middle {
@@ -1044,9 +1118,10 @@ body {
           gap: 5px;
           animation: slide-01 20s linear infinite;
           .content-middle-item {
-            flex: 0 0 160px;
-            @include size-160-77;
-            border: 1px solid #f00;
+            flex-shrink: 0;
+            img {
+              @include size-160-77;
+            }
           }
         }
         .smk-content-bottom {
@@ -1054,9 +1129,10 @@ body {
           gap: 5px;
           animation: slide-02 20s linear infinite;
           .content-bottom-item {
-            flex: 0 0 160px;
-            @include size-160-77;
-            border: 1px solid #f00;
+            flex-shrink: 0;
+            img {
+              @include size-160-77;
+            }
           }
         }
       }
@@ -1067,25 +1143,36 @@ body {
         .smk-content-top {
           display: flex;
           gap: 5px;
+          position: relative;
           .content-top-item {
-            @include size-326-326;
-            border: 1px solid #f00;
+            h2 {
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              color: map-get($map: $color, $key: light);
+              font-size: 1.4rem;
+            }
+            img {
+              @include size-326-326;
+            }
           }
         }
         .smk-content-middle {
           display: flex;
           gap: 5px;
           .content-middle-item {
-            @include size-160-77;
-            border: 1px solid #f00;
+            img {
+              @include size-160-77;
+            }
           }
         }
         .smk-content-bottom {
           display: flex;
           gap: 5px;
           .content-bottom-item {
-            @include size-160-77;
-            border: 1px solid #f00;
+            img {
+              @include size-160-77;
+            }
           }
         }
       }
