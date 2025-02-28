@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  font-family: "Noto Sans KR";
   font-size: 1.6rem;
   background-color: #000000;
   display: flex;
@@ -36,7 +37,7 @@ body {
   .lsi-email-login-container {
     width: 600px;
     padding: 2rem;
-    text-align: center;
+    text-align: left;
   }
   .lsi-email-login-header {
     color: #c1c7cd;
@@ -67,7 +68,7 @@ body {
   .lsi-email-login-form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     gap: 16px;
     flex-direction: column;
   }
@@ -93,6 +94,12 @@ body {
   .lsi-email-login-form input::placeholder {
     font-size: 1.6rem;
   }
+  .lsi-email-login-form .error-message {
+    display: none;
+    font-size: 1.2rem;
+    line-height: 1px;
+    color: #da1e28;
+  }
   .lsi-email-login-form .lsi-email-login-btn {
     width: 100%;
     height: 48px;
@@ -113,7 +120,7 @@ body {
   .lsi-email-login-container {
     width: 500px;
     padding: 2rem;
-    text-align: center;
+    text-align: left;
   }
   .lsi-email-login-header {
     color: #c1c7cd;
@@ -163,6 +170,13 @@ body {
   .lsi-email-login-form input::placeholder {
     font-size: 1.2rem;
   }
+  .lsi-email-login-form .error-message {
+    display: none;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    line-height: 1px;
+    color: #da1e28;
+  }
   .lsi-email-login-form .lsi-email-login-btn {
     width: 100%;
     height: 48px;
@@ -183,7 +197,7 @@ body {
   .lsi-email-login-container {
     width: 70%;
     padding: 1.5rem;
-    text-align: center;
+    text-align: left;
   }
   .lsi-email-login-header {
     color: #c1c7cd;
@@ -232,6 +246,13 @@ body {
   }
   .lsi-email-login-form input::placeholder {
     font-size: 1rem;
+  }
+  .lsi-email-login-form .error-message {
+    display: none;
+    font-size: 1rem;
+    margin: 15px 0;
+    line-height: 1px;
+    color: #da1e28;
   }
   .lsi-email-login-form .lsi-email-login-btn {
     width: 100%;

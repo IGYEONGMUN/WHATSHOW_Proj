@@ -3,45 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom css & js -->
     <link rel="stylesheet" href="./styles/signup.css" />
     <script defer src="./js/signup.js"></script>
+    <!-- domain icon -->
+    <link rel="icon" type="images/png" href="../IMGS/domain.png" />
     <title>WHATSHOW|회원가입</title>
   </head>
   <body>
-    <div class="lsi-signup-container">
+    <main class="lsi-signup-container">
       <h1>회원가입</h1>
       <form class="lsi-signup-form">
-        <input type="text" placeholder="이름을 입력하세요." required />
-        <span class="email-error lsi-error-message"></span>
-        <input type="email" placeholder="이메일을 입력하세요." required />
+        <input type="text" placeholder="이름을 입력하세요." />
+        <p class="name-error error-message"></p>
+        <input type="email" placeholder="이메일을 입력하세요." />
+        <p class="email-error error-message"></p>
         <p class="lsi-email-info">
           ※ 결제 등 중요 정보 알림, 로그인, 비밀번호 찾기에 사용돼요.
         </p>
-        <input type="password" placeholder="비밀번호를 입력하세요." required />
-        <span class="password-error lsi-error-message"></span>
+        <input type="password" placeholder="비밀번호를 입력하세요." />
+        <p class="password-error error-message"></p>
+        <input type="password" placeholder="다시 비밀번호를 입력하세요." />
+        <p class="password-error error-message"></p>
         <div class="lsi-terms-container">
           <label><input type="checkbox" /> 전체 약관에 동의 합니다.</label>
           <label><input type="checkbox" /> 만 14세 이상입니다.</label>
           <label
             ><input type="checkbox" /> (필수)
-            <a href="#">왓쇼 서비스 이용 약관 보기</a></label
+            <p>왓쇼 서비스 이용 약관 보기</p></label
           >
           <label
             ><input type="checkbox" /> (필수)
-            <a href="#">왓쇼포인트 서비스 이용 약관 보기</a></label
+            <p>왓쇼포인트 서비스 이용 약관 보기</p></label
           >
           <label
             ><input type="checkbox" /> (필수)
-            <a href="#">개인정보 수집 및 이용 동의 보기</a></label
+            <p>개인정보 수집 및 이용 동의 보기</p></label
           >
           <label
             ><input type="checkbox" /> (선택)
-            <a href="#">신작 알림 이벤트 정보 수신 보기</a></label
+            <p>청소년 보호정책</p></label
           >
         </div>
 
         <input type="submit" class="lsi-signup-btn" value="가입하기" />
       </form>
+    </main>
+    <!-- 모달 구조 -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+      </div>
     </div>
   </body>
 </html>

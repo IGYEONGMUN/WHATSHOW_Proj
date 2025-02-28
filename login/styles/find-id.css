@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  font-family: "Noto Sans KR";
   font-size: 1.6rem;
   background-color: #000000;
   display: flex;
@@ -74,6 +75,13 @@ body {
   .lsi-find-id-container .lsi-find-section input[type=text]:focus {
     border: 1px solid #00fffb;
     outline: none;
+  }
+  .lsi-find-id-container .lsi-find-section .error-message {
+    display: none;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1px;
+    color: #da1e28;
   }
   .lsi-find-id-container .lsi-find-section .lsi-find-btn {
     width: 100%;
@@ -197,6 +205,13 @@ body {
     border: 1px solid #00fffb;
     outline: none;
   }
+  .lsi-find-id-container .lsi-find-section .error-message {
+    display: none;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1px;
+    color: #da1e28;
+  }
   .lsi-find-id-container .lsi-find-section .lsi-find-btn {
     width: 100%;
     padding: 1rem;
@@ -264,6 +279,13 @@ body {
   .lsi-find-id-container .lsi-find-section input[type=text]:focus {
     border: 1px solid #00fffb;
     outline: none;
+  }
+  .lsi-find-id-container .lsi-find-section .error-message {
+    display: none;
+    font-size: 1rem;
+    margin-top: 8px;
+    line-height: 1px;
+    color: #da1e28;
   }
   .lsi-find-id-container .lsi-find-section .lsi-find-btn {
     width: 100%;

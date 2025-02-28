@@ -4,37 +4,77 @@ const findLink = document.querySelector(".lsi-find-link");
 const form = document.querySelector(".lsi-email-login-form");
 const emailInput = form.querySelector(".lsi-email-input");
 const passwordInput = form.querySelector(".lsi-password-input");
+const emailError = document.querySelector(".email-error");
+const passwordError = document.querySelector(".password-error");
 
-resetLink.addEventListener("click", () => {
-  window.location.href = "./reset-password.html";
-});
-
-signLink.addEventListener("click", () => {
-  window.location.href = "./signup.html";
-});
-
-findLink.addEventListener("click", () => {
-  window.location.href = "./find-id.html";
-});
+// 페이지 이동 이벤트
+resetLink.addEventListener(
+  "click",
+  () => (window.location.href = "./reset-password.html")
+);
+signLink.addEventListener(
+  "click",
+  () => (window.location.href = "./signup.html")
+);
+findLink.addEventListener(
+  "click",
+  () => (window.location.href = "./find-id.html")
+);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const emailValue = emailInput.value.trim();
   const passwordValue = passwordInput.value.trim();
-
-  // 로컬스토리지에서 저장된 사용자 목록 불러오기
   const users = JSON.parse(localStorage.getItem("wsUsers")) || [];
 
-  // 입력한 이메일과 비밀번호가 일치하는 사용자가 있는지 확인
-  const foundUser = users.find(
-    (user) => user.email === emailValue && user.password === passwordValue
-  );
+  // 기존 오류 메시지 초기화
+  emailError.innerText = "";
+  passwordError.innerText = "";
+  emailError.style.display = "none";
+  passwordError.style.display = "none";
 
-  if (foundUser) {
-    alert(`${foundUser.name}님 환영합니다. 왓쇼입니다!`);
-    window.location.href = "../index.html";
-  } else {
-    alert("이메일 또는 비밀번호가 올바르지 않습니다.");
+  // 1. 이메일 입력 확인
+  if (!emailValue) {
+    emailError.innerText = "이메일을 입력하세요.";
+    emailError.style.display = "block";
+    return; // 이메일 오류가 있으면 여기서 멈춤
   }
+
+  // 2. 이메일이 등록되지 않은 경우
+  const foundUser = users.find((user) => user.email === emailValue);
+  if (!foundUser) {
+    emailError.innerText = "등록되지 않은 이메일입니다.";
+    emailError.style.display = "block";
+    return; // 이메일 오류가 있으면 여기서 멈춤
+  }
+
+  // 3. 비밀번호 입력 확인 (이메일이 올바른 경우만 실행)
+  if (!passwordValue) {
+    passwordError.innerText = "비밀번호를 입력하세요.";
+    passwordError.style.display = "block";
+    return;
+  }
+
+  // 4. 비밀번호가 틀린 경우
+  if (foundUser.password !== passwordValue) {
+    passwordError.innerText = "비밀번호가 올바르지 않습니다.";
+    passwordError.style.display = "block";
+    return;
+  }
+
+  // 5. 로그인 성공
+  alert(`${foundUser.name}님 환영합니다. 왓쇼입니다!`);
+
+  // 로그인 상태 업데이트
+  users.forEach((user) => {
+    if (user.email === foundUser.email) {
+      user.isLoggedIn = true;
+    } else {
+      user.isLoggedIn = false; // 다른 유저는 로그아웃 상태 유지
+    }
+  });
+  localStorage.setItem("wsUsers", JSON.stringify(users)); // 변경된 값 저장
+
+  window.location.href = "../index.html";
 });
