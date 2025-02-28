@@ -93,7 +93,7 @@ categoryDrama.addEventListener("click", () => {
 });
 
 categoryEvent.addEventListener("click", () => {
-  window.location.href = "./event_gyeoungmun/event.html";
+  window.location.href = "./event_gyeoungmun/event_1.html";
 });
 
 desktopLogo.addEventListener("click", () => {
