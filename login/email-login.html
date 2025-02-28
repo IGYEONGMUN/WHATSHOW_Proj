@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom css & js -->
     <link rel="stylesheet" href="./styles/email-login.css" />
     <script defer src="./js/email-login.js"></script>
+    <!-- domain icon -->
+    <link rel="icon" type="images/png" href="../IMGS/domain.png" />
     <title>WHATSHOW|이메일 로그인</title>
   </head>
   <body>
@@ -25,11 +28,13 @@
           placeholder="이메일을 입력하세요."
           class="lsi-email-input"
         />
+        <p class="email-error error-message"></p>
         <input
           type="password"
           placeholder="비밀번호를 입력하세요."
           class="lsi-password-input"
         />
+        <p class="password-error error-message"></p>
         <input type="submit" class="lsi-email-login-btn" value="로그인" />
       </form>
     </main>

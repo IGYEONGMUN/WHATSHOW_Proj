@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-family: map-get($map: $font, $key: noto);
   font-size: 1.6rem;
   background-color: map-get($map: $color, $key: dark);
   display: flex;
@@ -23,7 +24,7 @@ body {
   .lsi-email-login-container {
     width: 600px;
     padding: 2rem;
-    text-align: center;
+    text-align: left;
   }
 
   .lsi-email-login-header {
@@ -56,7 +57,7 @@ body {
   .lsi-email-login-form {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     gap: 16px;
     flex-direction: column;
 
@@ -72,10 +73,12 @@ body {
         font-size: 1.6rem;
       }
     }
-    // .lsi-error-message {
-    //   color: map-get($map: $color, $key: error);
-    //   font-size: 1rem;
-    // }
+    .error-message {
+      display: none;
+      font-size: 1.2rem;
+      line-height: 1px;
+      color: map-get($map: $color, $key: error);
+    }
 
     .lsi-email-login-btn {
       width: 100%;
@@ -100,7 +103,7 @@ body {
   .lsi-email-login-container {
     width: 500px;
     padding: 2rem;
-    text-align: center;
+    text-align: left;
   }
 
   .lsi-email-login-header {
@@ -143,6 +146,13 @@ body {
         font-size: 1.2rem;
       }
     }
+    .error-message {
+      display: none;
+      font-size: 1.2rem;
+      margin: 15px 0;
+      line-height: 1px;
+      color: map-get($map: $color, $key: error);
+    }
     .lsi-email-login-btn {
       width: 100%;
       height: 48px;
@@ -166,7 +176,7 @@ body {
   .lsi-email-login-container {
     width: 70%;
     padding: 1.5rem;
-    text-align: center;
+    text-align: left;
   }
 
   .lsi-email-login-header {
@@ -208,6 +218,13 @@ body {
       &::placeholder {
         font-size: 1rem;
       }
+    }
+    .error-message {
+      display: none;
+      font-size: 1rem;
+      margin: 15px 0;
+      line-height: 1px;
+      color: map-get($map: $color, $key: error);
     }
     .lsi-email-login-btn {
       width: 100%;

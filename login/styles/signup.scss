@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-family: map-get($map: $font, $key: noto);
   font-size: 1.6rem;
   background-color: map-get($map: $color, $key: dark);
   display: flex;
@@ -36,7 +37,6 @@ body {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      align-items: center;
       width: 100%;
 
       input[type="text"],
@@ -49,6 +49,12 @@ body {
           border: 1px solid map-get($map: $color, $key: main);
           outline: none;
         }
+      }
+      .error-message {
+        display: none;
+        font-size: 1.2rem;
+        line-height: 1px;
+        color: map-get($map: $color, $key: error);
       }
 
       .lsi-email-info {
@@ -64,7 +70,7 @@ body {
         align-items: start;
         width: 100%;
         gap: 8px;
-        margin-bottom: 20px;
+        margin: 15px 0;
 
         label {
           font-size: 1.4rem;
@@ -74,15 +80,16 @@ body {
           gap: 10px;
 
           input[type="checkbox"] {
+            cursor: pointer;
             accent-color: map-get($map: $color, $key: main);
           }
 
-          a {
+          p {
             color: map-get($map: $color, $key: btn-bg);
             font-weight: bold;
             text-decoration: none;
-
             &:hover {
+              cursor: pointer;
               text-decoration: 2px underline;
             }
           }
@@ -98,6 +105,92 @@ body {
         }
       }
     }
+  }
+  /* Modal-container */
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  /* Modal-container */
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  /* Modal-contents */
+  .modal-content {
+    background: map-get($map: $color, $key: light);
+    padding: 2rem;
+    width: 30%;
+    height: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+
+    .open & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #modal-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #modal-text {
+      font-size: 1.4rem;
+      line-height: 2;
+    }
+  }
+
+  /* close btn */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: map-get($map: $color, $key: error);
   }
 }
 
@@ -129,6 +222,13 @@ body {
         font-size: 1rem;
       }
     }
+    .error-message {
+      display: none;
+      font-size: 1.2rem;
+      line-height: 1px;
+      color: map-get($map: $color, $key: error);
+      margin: 15px 0;
+    }
     .lsi-email-info {
       font-size: 1rem;
       color: map-get($map: $color, $key: sub-01);
@@ -143,7 +243,7 @@ body {
       align-items: start;
       width: 100%;
       gap: 8px;
-      margin-bottom: 20px;
+      margin: 15px 0;
 
       label {
         font-size: 1.2rem;
@@ -153,15 +253,17 @@ body {
         gap: 10px;
 
         input[type="checkbox"] {
+          cursor: pointer;
           accent-color: map-get($map: $color, $key: main);
         }
 
-        a {
+        p {
           color: map-get($map: $color, $key: btn-bg);
           font-weight: bold;
           text-decoration: none;
 
           &:hover {
+            cursor: pointer;
             text-decoration: 2px underline;
           }
         }
@@ -185,7 +287,7 @@ body {
   .lsi-signup-container {
     width: 60%;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
   }
 
   h1 {
@@ -213,7 +315,12 @@ body {
         font-size: 0.9rem;
       }
     }
-
+    .error-message {
+      display: none;
+      font-size: 1rem;
+      line-height: 1px;
+      color: map-get($map: $color, $key: error);
+    }
     .lsi-email-info {
       font-size: 0.9rem;
       color: map-get($map: $color, $key: sub-01);
@@ -228,7 +335,7 @@ body {
       align-items: start;
       width: 100%;
       gap: 8px;
-      margin-bottom: 20px;
+      margin: 15px 0;
 
       label {
         font-size: 1rem;
@@ -238,15 +345,17 @@ body {
         gap: 10px;
 
         input[type="checkbox"] {
+          cursor: pointer;
           accent-color: map-get($map: $color, $key: main);
         }
 
-        a {
+        p {
           color: map-get($map: $color, $key: btn-bg);
           font-weight: bold;
           text-decoration: none;
 
           &:hover {
+            cursor: pointer;
             text-decoration: 1px underline;
           }
         }

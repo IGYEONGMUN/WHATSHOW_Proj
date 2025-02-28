@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  font-family: map-get($map: $font, $key: noto);
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -60,11 +61,13 @@ body {
         h2 {
           font-size: 3.2rem;
           color: map-get($map: $color, $key: main);
+          cursor: pointer;
         }
         .category {
           display: flex;
+          justify-content: center;
           align-items: center;
-          gap: 30px;
+          gap: 8rem;
           h4 {
             color: map-get($map: $color, $key: btn-bg);
             cursor: pointer;
@@ -118,6 +121,26 @@ body {
           i {
             font-size: 2.4rem;
             color: map-get($map: $color, $key: btn-bg);
+            cursor: pointer;
+          }
+        }
+        .auth-buttons {
+          gap: 20px;
+          .login-btn {
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: map-get($map: $color, $key: light);
+          }
+          .signup-btn {
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: map-get($map: $color, $key: light);
           }
         }
       }
@@ -140,6 +163,7 @@ body {
         position: relative;
         img {
           @include size-1200-793;
+          cursor: pointer;
         }
         h2 {
           color: map-get($map: $color, $key: light);
@@ -470,6 +494,7 @@ body {
           h2 {
             font-size: 2.4rem;
             color: map-get($map: $color, $key: main);
+            cursor: pointer;
           }
           .category {
             display: flex;
@@ -895,6 +920,7 @@ body {
           h2 {
             font-size: 1.2rem;
             color: map-get($map: $color, $key: main);
+            cursor: pointer;
           }
         }
       }

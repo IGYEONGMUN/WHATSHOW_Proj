@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  font-family: "Noto Sans KR";
   font-size: 1.6rem;
   background-color: #000000;
   color: #00fffb;

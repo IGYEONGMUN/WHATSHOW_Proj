@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  font-family: map-get($map: $font, $key: noto);
   font-size: 1.6rem;
   background-color: map-get($map: $color, $key: dark);
   display: flex;
@@ -55,6 +56,13 @@ body {
           border: 1px solid map-get($map: $color, $key: main);
           outline: none;
         }
+      }
+      .error-message {
+        display: none;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        line-height: 1px;
+        color: map-get($map: $color, $key: error);
       }
 
       .lsi-find-btn {
@@ -177,6 +185,13 @@ body {
           outline: none;
         }
       }
+      .error-message {
+        display: none;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        line-height: 1px;
+        color: map-get($map: $color, $key: error);
+      }
 
       .lsi-find-btn {
         @include findBtn();
@@ -238,6 +253,13 @@ body {
           border: 1px solid map-get($map: $color, $key: main);
           outline: none;
         }
+      }
+      .error-message {
+        display: none;
+        font-size: 1rem;
+        margin-top: 8px;
+        line-height: 1px;
+        color: map-get($map: $color, $key: error);
       }
 
       .lsi-find-btn {

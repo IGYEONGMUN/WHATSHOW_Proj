@@ -24,6 +24,7 @@ html {
 }
 
 body {
+  font-family: "Noto Sans KR";
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -73,11 +74,13 @@ body {
 #web-container header .header-inner .inner-left h2 {
   font-size: 3.2rem;
   color: #00fffb;
+  cursor: pointer;
 }
 #web-container header .header-inner .inner-left .category {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 8rem;
 }
 #web-container header .header-inner .inner-left .category h4 {
   color: #c1c7cd;
@@ -140,6 +143,26 @@ body {
 #web-container header .header-inner .inner-right .menu-icon i {
   font-size: 2.4rem;
   color: #c1c7cd;
+  cursor: pointer;
+}
+#web-container header .header-inner .inner-right .auth-buttons {
+  gap: 20px;
+}
+#web-container header .header-inner .inner-right .auth-buttons .login-btn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+}
+#web-container header .header-inner .inner-right .auth-buttons .signup-btn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #ffffff;
 }
 #web-container .smk-content-inner {
   width: 1200px;
@@ -162,6 +185,7 @@ body {
   width: 1200px;
   height: 793px;
   border-radius: 5px;
+  cursor: pointer;
 }
 #web-container .smk-content-inner .smk-content-01 .smk-content-top h2 {
   color: #ffffff;
@@ -494,6 +518,7 @@ body {
   #tablet-container header .header-inner .inner-left h2 {
     font-size: 2.4rem;
     color: #00fffb;
+    cursor: pointer;
   }
   #tablet-container header .header-inner .inner-left .category {
     display: flex;
@@ -917,6 +942,7 @@ body {
   #mobile-container header .header-inner .inner-left h2 {
     font-size: 1.2rem;
     color: #00fffb;
+    cursor: pointer;
   }
   #mobile-container header .lgm_trigger {
     width: 30px;

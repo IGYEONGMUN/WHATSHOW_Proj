@@ -2,6 +2,7 @@ const emailInput = document.querySelector(
   ".lsi-find-section input[type='text']"
 );
 const findEmailBtn = document.querySelector(".lsi-find-section .lsi-find-btn");
+const emailError = document.querySelector(".email-error");
 const findAuthBtn = document.querySelectorAll(
   ".lsi-find-section .lsi-find-btn"
 )[1];
@@ -11,18 +12,29 @@ findEmailBtn.addEventListener("click", () => {
   const emailValue = emailInput.value.trim();
   const users = JSON.parse(localStorage.getItem("wsUsers")) || [];
 
-  // 로컬스토리지에서 해당 이메일 찾기
-  const foundUser = users.find((user) => user.email === emailValue);
+  // 기존 오류 메시지 초기화
+  emailError.innerText = "";
+  emailError.style.display = "none";
 
-  if (!foundUser) {
-    alert("등록되지 않은 이메일 입니다.");
+  // 1. 입력 여부 확인
+  if (!emailValue) {
+    emailError.innerText = "이메일을 입력하세요.";
+    emailError.style.display = "block";
     return;
   }
 
-  // 이메일이 존재하면 아이디 찾기 완료 메시지 출력
+  // 2. 로컬스토리지에서 해당 이메일 찾기
+  const foundUser = users.find((user) => user.email === emailValue);
+
+  if (!foundUser) {
+    emailError.innerText = "등록되지 않은 이메일입니다.";
+    emailError.style.display = "block";
+    return;
+  }
+
+  // 3. 이메일이 존재하면 아이디 찾기 완료 메시지 출력
   localStorage.setItem("wsFindID", JSON.stringify({ email: emailValue }));
   alert("입력하신 이메일로 계정 정보가 전송되었습니다.");
-
   window.location.href = "./email-login.html";
 });
 
@@ -41,7 +53,7 @@ function showAuthModal() {
       <p class="modal-text">휴대폰 번호를 입력하고 인증번호를 받아주세요.</p>
       <input type="tel" placeholder="휴대폰 번호 입력" class="auth-phone-input"/>
       <button class="auth-code-btn">인증번호 받기</button>
-      <input type="text" placeholder="인증번호 입력" class="auth-code" disabled />
+      <input type="text" class="auth-code" placeholder="인증번호 입력" disabled />
       <button class="verify-btn" disabled>인증 완료</button>
       <button class="close">닫기</button>
     </div>
